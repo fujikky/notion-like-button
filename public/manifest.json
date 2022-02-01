@@ -3,26 +3,30 @@
   "name": "Notion Like Button",
   "description": "Embed Like Button into Notion",
   "version": "1.0.0",
-  "options_ui": {
-    "page": "options.html"
+  "icons": {
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
   },
   "action": {
-    "default_icon": { "16": "icon.png" },
+    "default_icon": { "38": "icon-38.png" },
     "default_popup": "popup.html"
   },
   "content_scripts": [
-      {
-          "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"]
-      }
+    {
+      "matches": ["https://www.notion.so/*"],
+      "js": ["vendor.js", "content_script.js"],
+      "css": ["content_script-styles.css"]
+    }
   ],
   "background": {
-    "service_worker": "js/background.js"
+    "service_worker": "background.js"
   },
   "permissions": [
+    "tabs",
     "storage"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "https://api.notion.com/*"
   ]
 }
