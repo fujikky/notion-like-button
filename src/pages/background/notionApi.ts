@@ -1,4 +1,5 @@
 import { Client } from "@notionhq/client";
+import embededSettings from "embeded-settings";
 
 import { SettingsValues } from "~/types";
 
@@ -15,12 +16,15 @@ const getNotion = async (url: string) => {
   const pageMode = queryPageId ? "popup" : "page";
   if (!pageId) return null;
 
-  const settings = (await chrome.storage.local.get([
-    "apiToken",
-    "likeProp",
-  ])) as SettingsValues;
-  const likeProp = settings.likeProp ?? DEFAULT_LIKE_PROP;
+  const settings = embededSettings.apiToken
+    ? (embededSettings as SettingsValues)
+    : ((await chrome.storage.local.get([
+        "apiToken",
+        "likeProp",
+      ])) as SettingsValues);
   if (!settings.apiToken) return null;
+
+  const likeProp = settings.likeProp ?? DEFAULT_LIKE_PROP;
 
   const client = new Client({
     auth: settings.apiToken,

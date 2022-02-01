@@ -1,3 +1,4 @@
+import embededSettings from "embeded-settings";
 import {
   ComponentProps,
   VFC,
@@ -132,6 +133,9 @@ export const PopupApp: VFC = () => {
 
   return (
     <Settings
+      title={embededSettings.manifest.name}
+      version={embededSettings.manifest.version}
+      displaySettings={!embededSettings.apiToken}
       apiToken={apiToken ?? ""}
       likeProp={likeProp ?? ""}
       isSaveButtonEnabled={hasChanges && !hasErrors}

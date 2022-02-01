@@ -8,6 +8,9 @@ import { DownloadButton } from "./buttons/DownloadButton";
 import { UploadButton } from "./buttons/UploadButton";
 
 type Props = {
+  readonly title: string;
+  readonly version: string;
+  readonly displaySettings: boolean;
   readonly apiToken: string;
   readonly likeProp: string;
   readonly isSaveButtonEnabled: boolean;
@@ -23,6 +26,7 @@ const StyledWrapper = styled.div`
   width: 300px;
   padding: 20px;
   box-sizing: border-box;
+  color: #37352f;
 `;
 
 const StyledLogo = styled.img`
@@ -35,6 +39,12 @@ const StyledLogo = styled.img`
 const StyledTitle = styled.h1`
   font-size: 18px;
   text-align: center;
+`;
+
+const StyledVersion = styled.div`
+  font-size: 14px;
+  text-align: center;
+  opacity: 0.8;
 `;
 
 const StyledHeaderButtonWrapper = styled.div`
@@ -76,6 +86,9 @@ const StyledSaveButtonWrapper = styled.div`
 `;
 
 export const Settings: VFC<Props> = ({
+  title,
+  version,
+  displaySettings,
   apiToken,
   likeProp,
   errors,
@@ -96,52 +109,54 @@ export const Settings: VFC<Props> = ({
 
   return (
     <StyledWrapper>
-      <StyledLogo src="/icon.png" alt="Logo" />
-      <StyledTitle>Notion Like Button</StyledTitle>
+      <StyledLogo src="/icon-128.png" alt="Logo" />
+      <StyledTitle>{title}</StyledTitle>
+      <StyledVersion>{version}</StyledVersion>
 
-      <StyledHeaderButtonWrapper>
-        <UploadButton onUpload={onUpload}>Import</UploadButton>
-        <DownloadButton onDownload={onDownload}>Export</DownloadButton>
-      </StyledHeaderButtonWrapper>
-
-      <StyledApiTokenFormControl
-        fieldName="Notion API Token"
-        isRequired
-        error={errors.apiToken}
-        helperText={
-          <StyledApiTokenHelperLink
-            href="https://www.notion.so/my-integrations"
-            target="_blank"
-            rel="noreferrer"
+      {displaySettings ? (
+        <>
+          <StyledHeaderButtonWrapper>
+            <UploadButton onUpload={onUpload}>Import</UploadButton>
+            <DownloadButton onDownload={onDownload}>Export</DownloadButton>
+          </StyledHeaderButtonWrapper>
+          <StyledApiTokenFormControl
+            fieldName="Notion API Token"
+            isRequired
+            error={errors.apiToken}
+            helperText={
+              <StyledApiTokenHelperLink
+                href="https://www.notion.so/my-integrations"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Create Token
+              </StyledApiTokenHelperLink>
+            }
           >
-            Create Token
-          </StyledApiTokenHelperLink>
-        }
-      >
-        <Input
-          type="password"
-          placeholder="secret_xxx"
-          value={apiToken}
-          onChange={handleApiTokenChange}
-        />
-      </StyledApiTokenFormControl>
-
-      <StyledLikePropFormControl
-        fieldName="Like Field Name"
-        error={errors.likeProp}
-      >
-        <Input
-          placeholder="Like"
-          value={likeProp}
-          onChange={handleLikePropChange}
-        />
-      </StyledLikePropFormControl>
-
-      <StyledSaveButtonWrapper>
-        <Button isDisabled={!isSaveButtonEnabled} onClick={onSave}>
-          Save Changes
-        </Button>
-      </StyledSaveButtonWrapper>
+            <Input
+              type="password"
+              placeholder="secret_xxx"
+              value={apiToken}
+              onChange={handleApiTokenChange}
+            />
+          </StyledApiTokenFormControl>
+          <StyledLikePropFormControl
+            fieldName="Like Field Name"
+            error={errors.likeProp}
+          >
+            <Input
+              placeholder="Like"
+              value={likeProp}
+              onChange={handleLikePropChange}
+            />
+          </StyledLikePropFormControl>
+          <StyledSaveButtonWrapper>
+            <Button isDisabled={!isSaveButtonEnabled} onClick={onSave}>
+              Save Changes
+            </Button>
+          </StyledSaveButtonWrapper>
+        </>
+      ) : null}
     </StyledWrapper>
   );
 };

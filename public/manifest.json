@@ -1,8 +1,5 @@
 {
   "manifest_version": 3,
-  "name": "Notion Like Button",
-  "description": "Embed Like Button into Notion",
-  "version": "1.0.0",
   "icons": {
     "32": "icon-32.png",
     "48": "icon-48.png",
