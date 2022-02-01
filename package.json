@@ -58,5 +58,11 @@
     "webpack": "5.67.0",
     "webpack-cli": "4.9.2",
     "webpack-merge": "5.8.0"
-  }
+  },
+  "browserslist": [
+    ">0.5%",
+    "not dead",
+    "not ie > 0",
+    "not op_mini all"
+  ]
 }
