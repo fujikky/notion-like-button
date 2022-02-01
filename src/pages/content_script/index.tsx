@@ -6,9 +6,7 @@ import { ContentScriptApp } from "./ContentScriptApp";
 
 (async () => {
   const container = await waitFor("#notion-app");
-  const root = html(
-    `<div id="notion-like-bottom" style="position:fixed;right:0;bottom:0;z-index:1001" />`
-  );
+  const root = html(`<div id="notion-like-button" />`);
   container.parentNode?.appendChild(root);
 
   ReactDOM.render(<ContentScriptApp />, root);

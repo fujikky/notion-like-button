@@ -1,5 +1,5 @@
-export const waitFor = (selector: string): Promise<Element> => {
-  return new Promise((res) => {
+export const waitFor = (selector: string): Promise<Element> =>
+  new Promise((res) => {
     const onLoad = () => {
       const isReady = () => {
         const element = document.querySelector(selector);
@@ -21,7 +21,6 @@ export const waitFor = (selector: string): Promise<Element> => {
       onLoad();
     });
   });
-};
 
 export const html = (src: string) => {
   const range = document.createRange();

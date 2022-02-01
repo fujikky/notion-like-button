@@ -1,10 +1,4 @@
-import {
-  CSSProperties,
-  ComponentProps,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import { ComponentProps, useCallback, useEffect, useState } from "react";
 
 import { LikeButton } from "~/presentations/organisms/LikeButton";
 import { RuntimeMessageRequest, TabMessageRequest } from "~/types";
@@ -22,13 +16,13 @@ type LikeInfo = {
 
 type HookResult = {
   readonly isVisible: boolean;
-  readonly position: CSSProperties;
+  readonly pageMode: PageMode;
 } & ComponentProps<typeof LikeButton>;
 
-const POSITIONS_BY_PAGE_MODE: Record<PageMode, CSSProperties> = {
-  page: { bottom: 16, right: 64 },
-  popup: { bottom: 87, right: 86 },
-};
+// const POSITIONS_BY_PAGE_MODE: Record<PageMode, CSSProperties> = {
+//   page: { bottom: 16, right: 64 },
+//   popup: { bottom: 87, right: 86 },
+// };
 
 export const useLikeButton = (): HookResult => {
   const [isVisible, setVisible] = useState(false);
@@ -137,11 +131,8 @@ export const useLikeButton = (): HookResult => {
   const currentLikeInfo = temporaryLikeInfo ?? likeInfo;
 
   return {
+    ...currentLikeInfo,
     isVisible,
-    position: POSITIONS_BY_PAGE_MODE[currentLikeInfo.pageMode],
-    isLiked: currentLikeInfo.isLiked,
-    likeCount: currentLikeInfo.likeCount,
-    withAnimation: currentLikeInfo.withAnimation,
     isSubmitting: !!temporaryLikeInfo,
     onCreateLike: handleCreateLike,
     onDeleteLike: handleDeleteLike,
