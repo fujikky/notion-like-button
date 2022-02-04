@@ -46,7 +46,7 @@
     "@storybook/builder-webpack5": "6.4.16",
     "@storybook/manager-webpack5": "6.4.16",
     "@storybook/react": "6.4.16",
-    "@types/chrome": "0.0.177",
+    "@types/chrome": "0.0.178",
     "@types/jest": "27.4.0",
     "@types/mini-css-extract-plugin": "2.5.1",
     "@types/react": "17.0.38",
