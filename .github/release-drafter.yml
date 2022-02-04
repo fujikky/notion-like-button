@@ -36,12 +36,6 @@ version-resolver:
   default: patch
 
 autolabeler:
-  - label: frontend
-    files:
-      - "frontend/**"
-  - label: backend
-    files:
-      - "backend/**"
   - label: "breaking change"
     branch:
       - '/breaking\/.+/'
