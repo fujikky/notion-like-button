@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "NODE_ENV=production webpack --config webpack/webpack.prod.js",
-    "clean": "rimraf dist",
+    "build:clean": "rimraf dist",
+    "build:webpack": "NODE_ENV=production webpack --config webpack/webpack.prod.js",
+    "build:zip": "zip -r dist.zip dist",
+    "build": "run-s build:*",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:tsc": "tsc",
     "lint:eslint": "eslint --cache './**/*.{js,jsx,ts,tsx}'",
