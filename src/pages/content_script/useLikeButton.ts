@@ -19,11 +19,6 @@ type HookResult = {
   readonly pageMode: PageMode;
 } & ComponentProps<typeof LikeButton>;
 
-// const POSITIONS_BY_PAGE_MODE: Record<PageMode, CSSProperties> = {
-//   page: { bottom: 16, right: 64 },
-//   popup: { bottom: 87, right: 86 },
-// };
-
 export const useLikeButton = (): HookResult => {
   const [isVisible, setVisible] = useState(false);
   const [likeInfo, setLikeInfo] = useState<LikeInfo>({
