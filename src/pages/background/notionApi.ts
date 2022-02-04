@@ -24,7 +24,7 @@ const getNotion = async (url: string) => {
       ])) as SettingsValues);
   if (!settings.apiToken) return null;
 
-  const likeProp = settings.likeProp ?? DEFAULT_LIKE_PROP;
+  const likeProp = settings.likeProp || DEFAULT_LIKE_PROP;
 
   const client = new Client({
     auth: settings.apiToken,
