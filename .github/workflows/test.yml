@@ -1,11 +1,6 @@
 name: test
 
-on:
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'frontend/**'
+on: push
 
 jobs:
   test:
