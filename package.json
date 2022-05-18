@@ -33,10 +33,10 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "7.17.5",
-    "@babel/preset-env": "7.16.11",
-    "@babel/preset-react": "7.16.7",
-    "@babel/preset-typescript": "7.16.7",
+    "@babel/core": "7.17.12",
+    "@babel/preset-env": "7.17.12",
+    "@babel/preset-react": "7.17.12",
+    "@babel/preset-typescript": "7.17.12",
     "@linaria/babel-preset": "3.0.0-beta.15",
     "@linaria/shaker": "3.0.0-beta.15",
     "@linaria/webpack-loader": "3.0.0-beta.16",
@@ -51,7 +51,7 @@
     "@types/mini-css-extract-plugin": "2.5.1",
     "@types/react": "17.0.45",
     "@types/react-dom": "17.0.17",
-    "babel-loader": "8.2.3",
+    "babel-loader": "8.2.5",
     "copy-webpack-plugin": "10.2.4",
     "css-loader": "6.7.1",
     "eslint": "8.10.0",
