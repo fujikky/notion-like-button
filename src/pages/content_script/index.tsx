@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import { html, waitFor } from "~/lib/dom";
 
@@ -9,5 +9,6 @@ import { ContentScriptApp } from "./ContentScriptApp";
   const root = html(`<div id="notion-like-button" />`);
   container.parentNode?.appendChild(root);
 
-  ReactDOM.render(<ContentScriptApp />, root);
+  const reactRoot = createRoot(root);
+  reactRoot.render(<ContentScriptApp />);
 })().catch(console.error);
