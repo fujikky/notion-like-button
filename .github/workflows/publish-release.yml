@@ -7,22 +7,34 @@ jobs:
   publish_release:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .node-version
+          cache: yarn
+      - name: yarn install
+        run: yarn install --frozen-lockfile --prefer-offline
       - uses: release-drafter/release-drafter@v5
         id: release_drafter
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v3
       - name: bump version
         run: |
-          npm version ${{ steps.release_drafter.outputs.tag }} -m ":bookmark: version bump" --git-tag-version false
+          npm version "${{ steps.release_drafter.outputs.tag_name }}" --git-tag-version false
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+          git add .
+          git commit -m ":bookmark: version bump"
           git push
           yarn build
       - uses: release-drafter/release-drafter@v5
+        id: release_drafter_publish
         with:
           publish: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: shogo82148/actions-upload-release-asset@v1
+      - uses: AButler/upload-release-assets@v2.0
         with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: dist.zip
+          files: dist.zip
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          release-tag: ${{ steps.release_drafter_publish.outputs.tag_name }}
