@@ -26,7 +26,7 @@
     "url": "https://github.com/fujikky/notion-like-button.git"
   },
   "dependencies": {
-    "@linaria/core": "3.0.0-beta.15",
+    "@linaria/core": "3.0.0-beta.21",
     "@linaria/react": "3.0.0-beta.15",
     "@notionhq/client": "1.0.4",
     "react": "18.1.0",
