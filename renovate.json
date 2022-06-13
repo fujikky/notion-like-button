@@ -5,6 +5,12 @@
     "packages:linters",
     ":maintainLockFilesWeekly"
   ],
-  "dependencyDashboard": true,
-  "postUpdateOptions": ["yarnDedupeFewer"]
+  "postUpdateOptions": ["yarnDedupeFewer"],
+  "automerge": true,
+  "packageRules": [
+    {
+      "groupName": "linaria",
+      "packagePatterns": ["@linaria/"]
+    }
+  ]
 }
