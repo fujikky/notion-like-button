@@ -1,8 +1,10 @@
 import { styled } from "@linaria/react";
 import type { ReactNode } from "react";
 
+import type { Layout } from "~/types";
+
 type Props = {
-  readonly pageMode: "page" | "popup";
+  readonly layout: Layout;
   readonly children: ReactNode;
 };
 
@@ -14,7 +16,7 @@ const StylePageContainer = styled.div`
   bottom: 16px;
 `;
 
-const StylePopupContainer = styled.div`
+const StyleCenterPeekContainer = styled.div`
   z-index: 1000;
   pointer-events: none;
   position: fixed;
@@ -26,17 +28,17 @@ const StylePopupContainer = styled.div`
   height: calc(100% - 144px);
 `;
 
-const StylePopupInner = styled.div`
+const StyleCenterPeekInner = styled.div`
   position: absolute;
   right: 16px;
   bottom: 16px;
 `;
 
-export const NotionContainer = ({ pageMode, children }: Props) =>
-  pageMode === "page" ? (
-    <StylePageContainer>{children}</StylePageContainer>
+export const NotionContainer = ({ layout, children }: Props) =>
+  layout === "center-peek" ? (
+    <StyleCenterPeekContainer>
+      <StyleCenterPeekInner>{children}</StyleCenterPeekInner>
+    </StyleCenterPeekContainer>
   ) : (
-    <StylePopupContainer>
-      <StylePopupInner>{children}</StylePopupInner>
-    </StylePopupContainer>
+    <StylePageContainer>{children}</StylePageContainer>
   );
