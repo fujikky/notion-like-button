@@ -3,7 +3,8 @@
   "compilerOptions": {
     "jsx": "preserve",
     "noEmit": true,
-    "paths": { "~/*": ["./src/*"] }
+    "paths": { "~/*": ["./src/*"] },
+    "baseUrl": "."
   },
   "include": ["src/**/*", "typings.d.ts"]
 }
