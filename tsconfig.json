@@ -1,17 +1,9 @@
 {
+  "extends": "@tsconfig/node16-strictest/tsconfig.json",
   "compilerOptions": {
-    "strict": true,
-    "module": "commonjs",
-    "target": "esnext",
-    "lib": ["dom", "esnext"],
-    "esModuleInterop": true,
-    "sourceMap": false,
-    "rootDir": "src",
-    "outDir": "dist/js",
-    "noEmitOnError": true,
     "jsx": "preserve",
-    "typeRoots": ["node_modules/@types"],
-    "baseUrl": ".",
+    "noEmit": true,
     "paths": { "~/*": ["./src/*"] }
-  }
+  },
+  "include": ["src/**/*", "typings.d.ts"]
 }

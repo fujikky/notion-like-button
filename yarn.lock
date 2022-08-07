@@ -2416,6 +2416,11 @@
     regenerator-runtime "^0.13.7"
     resolve-from "^5.0.0"
 
+"@tsconfig/node16-strictest@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node16-strictest/-/node16-strictest-1.0.3.tgz#f99c8ebd35eab32277c26ebaea55b72e77855ec1"
+  integrity sha512-sY7TxE3BzAdsCuKqGWOTtAoPe4tPD0xlPWfjinJvrBvCulyALVSwvIoo7WMcX8O/WyMFzn9rQObA43mAogQ8MQ==
+
 "@types/chrome@0.0.193":
   version "0.0.193"
   resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.193.tgz#cd0dc5033f27a243d228aebe566c3ec19ef17e36"
