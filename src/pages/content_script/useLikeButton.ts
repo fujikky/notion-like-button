@@ -1,3 +1,4 @@
+import { scrollbarWidth } from "@xobotyi/scrollbar-width";
 import type { ComponentProps } from "react";
 import { useCallback, useEffect, useState } from "react";
 
@@ -16,6 +17,7 @@ type LikeInfo = {
 type HookResult = {
   readonly isVisible: boolean;
   readonly layout: Layout;
+  readonly hasScrollBar: boolean;
 } & ComponentProps<typeof LikeButton>;
 
 export const useLikeButton = (): HookResult => {
@@ -29,6 +31,7 @@ export const useLikeButton = (): HookResult => {
   const [temporaryLikeInfo, setTemporaryLikeInfo] = useState<LikeInfo | null>(
     null
   );
+  const [hasScrollBar] = useState(() => (scrollbarWidth() ?? 0) > 0);
 
   const handleCreateLike = useCallback(() => {
     const { userId, url } = getNotionInfo();
@@ -128,6 +131,7 @@ export const useLikeButton = (): HookResult => {
     ...currentLikeInfo,
     isVisible,
     isSubmitting: !!temporaryLikeInfo,
+    hasScrollBar,
     onCreateLike: handleCreateLike,
     onDeleteLike: handleDeleteLike,
   };

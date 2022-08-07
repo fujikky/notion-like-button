@@ -1,3 +1,4 @@
+import { css, cx } from "@linaria/core";
 import { styled } from "@linaria/react";
 import type { ReactNode } from "react";
 
@@ -5,6 +6,7 @@ import type { Layout } from "~/types";
 
 type Props = {
   readonly layout: Layout;
+  readonly hasScrollBar: boolean;
   readonly children: ReactNode;
 };
 
@@ -14,6 +16,11 @@ const StylePageContainer = styled.div`
   position: fixed;
   right: 64px;
   bottom: 16px;
+`;
+
+const hasScollBarStyle = css`
+  right: 74px;
+  bottom: 26px;
 `;
 
 const StyleCenterPeekContainer = styled.div`
@@ -34,11 +41,13 @@ const StyleCenterPeekInner = styled.div`
   bottom: 16px;
 `;
 
-export const NotionContainer = ({ layout, children }: Props) =>
+export const NotionContainer = ({ layout, hasScrollBar, children }: Props) =>
   layout === "center-peek" ? (
     <StyleCenterPeekContainer>
       <StyleCenterPeekInner>{children}</StyleCenterPeekInner>
     </StyleCenterPeekContainer>
   ) : (
-    <StylePageContainer>{children}</StylePageContainer>
+    <StylePageContainer className={cx(hasScrollBar && hasScollBarStyle)}>
+      {children}
+    </StylePageContainer>
   );
