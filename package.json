@@ -51,7 +51,7 @@
     "@types/chrome": "0.0.193",
     "@types/jest": "28.1.6",
     "@types/mini-css-extract-plugin": "2.5.1",
-    "@types/react": "18.0.15",
+    "@types/react": "18.0.16",
     "@types/react-dom": "18.0.6",
     "babel-loader": "8.2.5",
     "copy-webpack-plugin": "11.0.0",
