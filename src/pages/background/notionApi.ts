@@ -1,18 +1,48 @@
 import { Client } from "@notionhq/client";
 import embededSettings from "embeded-settings";
 
-import type { SettingsValues } from "~/types";
+import type { Layout, SettingsValues } from "~/types";
 
 const DEFAULT_LIKE_PROP = "Like";
 
-const getNotion = async (url: string) => {
+type NotionPageInfo = {
+  readonly pageId: string;
+  readonly layout: Layout;
+};
+
+type NotionPageContext = {
+  readonly client: Client;
+  readonly likeProp: string;
+} & NotionPageInfo;
+
+const resolvePageInfo = (url: string): NotionPageInfo | null => {
   const u = new URL(url);
   if (u.host !== "www.notion.so") return null;
 
   const queryPageId = u.searchParams.get("p");
-  const pageId = queryPageId || u.pathname.split(/(-|\/)/g).at(-1);
-  const pageMode = queryPageId ? "popup" : "page";
-  if (!pageId) return null;
+  if (queryPageId) {
+    return {
+      pageId: queryPageId,
+      layout: u.searchParams.get("pm") === "s" ? "side-peek" : "center-peek",
+    };
+  }
+
+  const pathPageId = u.pathname.split(/(-|\/)/g).at(-1);
+  if (pathPageId) {
+    return {
+      pageId: pathPageId,
+      layout: "full-page",
+    };
+  }
+
+  return null;
+};
+
+const getNotionContext = async (
+  url: string
+): Promise<NotionPageContext | null> => {
+  const pageInfo = resolvePageInfo(url);
+  if (!pageInfo) return null;
 
   const settings = embededSettings.apiToken
     ? (embededSettings as SettingsValues)
@@ -36,7 +66,7 @@ const getNotion = async (url: string) => {
     },
   });
 
-  return { pageId, pageMode, likeProp, client } as const;
+  return { ...pageInfo, likeProp, client };
 };
 
 const getLikedPersonIds = async (
@@ -55,13 +85,13 @@ const getLikedPersonIds = async (
   });
   if (property.object !== "list") throw Error("like property is not a list");
 
-  const mutablePeople = [];
+  const mutableIds = [];
   // eslint-disable-next-line functional/no-loop-statement
   for (const item of property.results) {
     if (item.type !== "people") continue;
-    mutablePeople.push(item.people.id);
+    mutableIds.push(item.people.id);
   }
-  return mutablePeople;
+  return mutableIds;
 };
 
 const createLikeInfo = (
@@ -74,57 +104,65 @@ const createLikeInfo = (
 };
 
 export const getLikeInfo = async (url: string, userId: string) => {
-  const notion = await getNotion(url);
+  const notion = await getNotionContext(url);
   if (!notion) return null;
 
-  const { pageId, pageMode, likeProp, client } = notion;
-
   try {
-    const ids = await getLikedPersonIds(client, pageId, likeProp);
-    return { ...createLikeInfo(ids, userId), pageMode, url };
+    const ids = await getLikedPersonIds(
+      notion.client,
+      notion.pageId,
+      notion.likeProp
+    );
+    return { ...createLikeInfo(ids, userId), layout: notion.layout, url };
   } catch {
     return null;
   }
 };
 
 export const createLike = async (url: string, userId: string) => {
-  const notion = await getNotion(url);
+  const notion = await getNotionContext(url);
   if (!notion) throw Error("Could not find valid api settings");
 
-  const { pageId, pageMode, likeProp, client } = notion;
-  const ids = await getLikedPersonIds(client, pageId, likeProp);
+  const ids = await getLikedPersonIds(
+    notion.client,
+    notion.pageId,
+    notion.likeProp
+  );
   const people = ids.map((id) => ({ id })).concat({ id: userId });
-  await client.pages.update({
-    page_id: pageId,
-    properties: { [likeProp]: { type: "people", people } },
+  await notion.client.pages.update({
+    page_id: notion.pageId,
+    properties: { [notion.likeProp]: { type: "people", people } },
   });
   return {
     ...createLikeInfo(
       people.map((p) => p.id),
       userId
     ),
-    pageMode,
+    layout: notion.layout,
     url,
   };
 };
 
 export const deleteLike = async (url: string, userId: string) => {
-  const notion = await getNotion(url);
+  const notion = await getNotionContext(url);
   if (!notion) throw Error("Could not find valid api settings");
 
-  const { pageId, pageMode, likeProp, client } = notion;
-  const ids = await getLikedPersonIds(client, pageId, likeProp);
+  const ids = await getLikedPersonIds(
+    notion.client,
+    notion.pageId,
+    notion.likeProp
+  );
   const people = ids.filter((id) => id !== userId).map((id) => ({ id }));
-  await client.pages.update({
-    page_id: pageId,
-    properties: { [likeProp]: { type: "people", people } },
+  await notion.client.pages.update({
+    page_id: notion.pageId,
+    properties: { [notion.likeProp]: { type: "people", people } },
   });
   return {
     ...createLikeInfo(
       people.map((p) => p.id),
       userId
     ),
-    pageMode,
+    layout: notion.layout,
     url,
   };
 };

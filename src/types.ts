@@ -1,3 +1,5 @@
+export type Layout = "full-page" | "center-peek" | "side-peek";
+
 export type RuntimeMessageRequest =
   | {
       readonly message: "init";
@@ -20,14 +22,14 @@ export type TabMessageRequest =
       readonly message: "showLikeButton";
       readonly isLiked: boolean;
       readonly likeCount: number;
-      readonly pageMode: "page" | "popup";
+      readonly layout: Layout;
       readonly url: string;
     }
   | {
       readonly message: "updateLikeButton";
       readonly isLiked: boolean;
       readonly likeCount: number;
-      readonly pageMode: "page" | "popup";
+      readonly layout: Layout;
       readonly url: string;
     }
   | {

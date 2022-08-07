@@ -4,10 +4,11 @@ import { NotionContainer } from "~/presentations/templates/NotionContainer";
 import { useLikeButton } from "./useLikeButton";
 
 export const ContentScriptApp = () => {
-  const { isVisible, pageMode, ...likeButtonProps } = useLikeButton();
+  const { isVisible, layout, hasScrollBar, ...likeButtonProps } =
+    useLikeButton();
 
   return isVisible ? (
-    <NotionContainer pageMode={pageMode}>
+    <NotionContainer layout={layout} hasScrollBar={hasScrollBar}>
       <LikeButton {...likeButtonProps} />
     </NotionContainer>
   ) : null;

@@ -1,23 +1,23 @@
+import { scrollbarWidth } from "@xobotyi/scrollbar-width";
 import type { ComponentProps } from "react";
 import { useCallback, useEffect, useState } from "react";
 
 import type { LikeButton } from "~/presentations/organisms/LikeButton";
-import type { RuntimeMessageRequest, TabMessageRequest } from "~/types";
+import type { Layout, RuntimeMessageRequest, TabMessageRequest } from "~/types";
 
 import { getNotionInfo } from "./getNotionInfo";
-
-type PageMode = "page" | "popup";
 
 type LikeInfo = {
   readonly isLiked: boolean;
   readonly likeCount: number;
-  readonly pageMode: PageMode;
+  readonly layout: Layout;
   readonly withAnimation: boolean;
 };
 
 type HookResult = {
   readonly isVisible: boolean;
-  readonly pageMode: PageMode;
+  readonly layout: Layout;
+  readonly hasScrollBar: boolean;
 } & ComponentProps<typeof LikeButton>;
 
 export const useLikeButton = (): HookResult => {
@@ -25,12 +25,13 @@ export const useLikeButton = (): HookResult => {
   const [likeInfo, setLikeInfo] = useState<LikeInfo>({
     isLiked: false,
     likeCount: 0,
-    pageMode: "page",
+    layout: "full-page",
     withAnimation: false,
   });
   const [temporaryLikeInfo, setTemporaryLikeInfo] = useState<LikeInfo | null>(
     null
   );
+  const [hasScrollBar] = useState(() => (scrollbarWidth() ?? 0) > 0);
 
   const handleCreateLike = useCallback(() => {
     const { userId, url } = getNotionInfo();
@@ -39,7 +40,7 @@ export const useLikeButton = (): HookResult => {
     setTemporaryLikeInfo({
       isLiked: true,
       likeCount: likeInfo.likeCount + 1,
-      pageMode: likeInfo.pageMode,
+      layout: likeInfo.layout,
       withAnimation: true,
     });
 
@@ -57,7 +58,7 @@ export const useLikeButton = (): HookResult => {
     setTemporaryLikeInfo({
       isLiked: false,
       likeCount: likeInfo.likeCount - 1,
-      pageMode: likeInfo.pageMode,
+      layout: likeInfo.layout,
       withAnimation: false,
     });
 
@@ -79,7 +80,7 @@ export const useLikeButton = (): HookResult => {
           setLikeInfo({
             isLiked: request.isLiked,
             likeCount: request.likeCount,
-            pageMode: request.pageMode,
+            layout: request.layout,
             withAnimation: false,
           });
           setTemporaryLikeInfo(null);
@@ -90,7 +91,7 @@ export const useLikeButton = (): HookResult => {
           setLikeInfo({
             isLiked: request.isLiked,
             likeCount: request.likeCount,
-            pageMode: request.pageMode,
+            layout: request.layout,
             withAnimation: false,
           });
           setTemporaryLikeInfo(null);
@@ -130,6 +131,7 @@ export const useLikeButton = (): HookResult => {
     ...currentLikeInfo,
     isVisible,
     isSubmitting: !!temporaryLikeInfo,
+    hasScrollBar,
     onCreateLike: handleCreateLike,
     onDeleteLike: handleDeleteLike,
   };
