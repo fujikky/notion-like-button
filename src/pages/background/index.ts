@@ -1,4 +1,4 @@
-import { RuntimeMessageRequest, TabMessageRequest } from "~/types";
+import type { RuntimeMessageRequest, TabMessageRequest } from "~/types";
 
 import { createLike, deleteLike, getLikeInfo } from "./notionApi";
 

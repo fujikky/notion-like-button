@@ -2416,6 +2416,11 @@
     regenerator-runtime "^0.13.7"
     resolve-from "^5.0.0"
 
+"@tsconfig/node16-strictest@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node16-strictest/-/node16-strictest-1.0.3.tgz#f99c8ebd35eab32277c26ebaea55b72e77855ec1"
+  integrity sha512-sY7TxE3BzAdsCuKqGWOTtAoPe4tPD0xlPWfjinJvrBvCulyALVSwvIoo7WMcX8O/WyMFzn9rQObA43mAogQ8MQ==
+
 "@types/chrome@0.0.193":
   version "0.0.193"
   resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.193.tgz#cd0dc5033f27a243d228aebe566c3ec19ef17e36"
@@ -5124,10 +5129,10 @@ eslint-config-prettier@^8.3.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.5.0.tgz#5a81680ec934beca02c7b1a61cf8ca34b66feab1"
   integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
 
-eslint-config-timetree@1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-timetree/-/eslint-config-timetree-1.7.3.tgz#94224fefea418cb8e2890e0d00fad6e2114411a5"
-  integrity sha512-QNV/a6yNMm1LYQPWpzZV9DsHpATgRMsN2GRW70L4Z6zHkS4QKz2uu5+32VYdDu3cF00c/l4eQc1x2D4otlYrJQ==
+eslint-config-timetree@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-timetree/-/eslint-config-timetree-1.8.0.tgz#d5a73ede7d33f3da993ca640e1a8c06db1f3422d"
+  integrity sha512-04BtIyVWoQobt2fCCiAo29LTmKeg2hg2BYBQrnNoLW1l0JJP7Ue72ffVgWI0hTxp7v7+evQBG6a9ZQ8xXRnACA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.0.0"
     "@typescript-eslint/parser" "^5.0.0"

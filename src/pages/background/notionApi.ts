@@ -1,7 +1,7 @@
 import { Client } from "@notionhq/client";
 import embededSettings from "embeded-settings";
 
-import { SettingsValues } from "~/types";
+import type { SettingsValues } from "~/types";
 
 type Page = Awaited<ReturnType<typeof Client.prototype.pages.retrieve>>;
 
@@ -29,7 +29,11 @@ const getNotion = async (url: string) => {
   const client = new Client({
     auth: settings.apiToken,
     fetch: (input, init) => {
-      const newInit = { ...init, method: init?.method?.toUpperCase() };
+      const method = init?.method?.toUpperCase();
+      const newInit: RequestInit = {
+        ...init,
+        ...(method ? { method } : {}),
+      };
       return fetch(input, newInit);
     },
   });

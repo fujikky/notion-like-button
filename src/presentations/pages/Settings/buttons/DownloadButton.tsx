@@ -1,5 +1,6 @@
 import { styled } from "@linaria/react";
-import { ReactNode, VFC, useCallback, useRef } from "react";
+import type { ReactNode } from "react";
+import { useCallback, useRef } from "react";
 
 import { Button } from "~/presentations/atoms/Button";
 
@@ -20,11 +21,7 @@ const StyledIcon = styled.svg`
   fill: currentColor;
 `;
 
-export const DownloadButton: VFC<Props> = ({
-  className,
-  children,
-  onDownload,
-}) => {
+export const DownloadButton = ({ className, children, onDownload }: Props) => {
   const ref = useRef<HTMLAnchorElement>(null);
   const handleClick = useCallback(() => {
     const mutableAnchor = ref.current;
