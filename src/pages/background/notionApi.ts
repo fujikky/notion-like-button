@@ -3,8 +3,6 @@ import embededSettings from "embeded-settings";
 
 import type { SettingsValues } from "~/types";
 
-type Page = Awaited<ReturnType<typeof Client.prototype.pages.retrieve>>;
-
 const DEFAULT_LIKE_PROP = "Like";
 
 const getNotion = async (url: string) => {
@@ -41,20 +39,37 @@ const getNotion = async (url: string) => {
   return { pageId, pageMode, likeProp, client } as const;
 };
 
-const resolveLikedPeople = (page: Page, likeProp: string) => {
-  if (!("properties" in page)) throw Error("Could not find properties in page");
+const getLikedPersonIds = async (
+  client: Client,
+  pageId: string,
+  likeProp: string
+) => {
+  const page = await client.pages.retrieve({ page_id: pageId });
+  if (!("properties" in page)) throw new Error("page has not properties");
+  const propertyId = page.properties[likeProp]?.id;
+  if (!propertyId) throw new Error("page has not like prop");
 
-  const like = page.properties[likeProp];
-  if (!like || like.type !== "people")
-    throw Error("Could not find like prop with peoople type");
+  const property = await client.pages.properties.retrieve({
+    page_id: page.id,
+    property_id: propertyId,
+  });
+  if (property.object !== "list") throw Error("like property is not a list");
 
-  return like.people;
+  const mutablePeople = [];
+  // eslint-disable-next-line functional/no-loop-statement
+  for (const item of property.results) {
+    if (item.type !== "people") continue;
+    mutablePeople.push(item.people.id);
+  }
+  return mutablePeople;
 };
 
-const createLikeInfo = (page: Page, userId: string, likeProp: string) => {
-  const people = resolveLikedPeople(page, likeProp);
-  const isLiked = people.some((people) => people.id === userId);
-  const likeCount = people.length;
+const createLikeInfo = (
+  personIds: readonly string[],
+  currentUserId: string
+) => {
+  const isLiked = personIds.some((id) => id === currentUserId);
+  const likeCount = personIds.length;
   return { isLiked, likeCount };
 };
 
@@ -65,8 +80,8 @@ export const getLikeInfo = async (url: string, userId: string) => {
   const { pageId, pageMode, likeProp, client } = notion;
 
   try {
-    const page = await client.pages.retrieve({ page_id: pageId });
-    return { ...createLikeInfo(page, userId, likeProp), pageMode, url };
+    const ids = await getLikedPersonIds(client, pageId, likeProp);
+    return { ...createLikeInfo(ids, userId), pageMode, url };
   } catch {
     return null;
   }
@@ -77,14 +92,20 @@ export const createLike = async (url: string, userId: string) => {
   if (!notion) throw Error("Could not find valid api settings");
 
   const { pageId, pageMode, likeProp, client } = notion;
-  const page = await client.pages.retrieve({ page_id: pageId });
-  const people = resolveLikedPeople(page, likeProp);
-  const newPeople = people.map((p) => ({ id: p.id })).concat({ id: userId });
-  const newPage = await client.pages.update({
+  const ids = await getLikedPersonIds(client, pageId, likeProp);
+  const people = ids.map((id) => ({ id })).concat({ id: userId });
+  await client.pages.update({
     page_id: pageId,
-    properties: { [likeProp]: { type: "people", people: newPeople } },
+    properties: { [likeProp]: { type: "people", people } },
   });
-  return { ...createLikeInfo(newPage, userId, likeProp), pageMode, url };
+  return {
+    ...createLikeInfo(
+      people.map((p) => p.id),
+      userId
+    ),
+    pageMode,
+    url,
+  };
 };
 
 export const deleteLike = async (url: string, userId: string) => {
@@ -92,14 +113,18 @@ export const deleteLike = async (url: string, userId: string) => {
   if (!notion) throw Error("Could not find valid api settings");
 
   const { pageId, pageMode, likeProp, client } = notion;
-  const page = await client.pages.retrieve({ page_id: pageId });
-  const people = resolveLikedPeople(page, likeProp);
-  const newPeople = people
-    .filter((p) => p.id !== userId)
-    .map((p) => ({ id: p.id }));
-  const newPage = await client.pages.update({
+  const ids = await getLikedPersonIds(client, pageId, likeProp);
+  const people = ids.filter((id) => id !== userId).map((id) => ({ id }));
+  await client.pages.update({
     page_id: pageId,
-    properties: { [likeProp]: { type: "people", people: newPeople } },
+    properties: { [likeProp]: { type: "people", people } },
   });
-  return { ...createLikeInfo(newPage, userId, likeProp), pageMode, url };
+  return {
+    ...createLikeInfo(
+      people.map((p) => p.id),
+      userId
+    ),
+    pageMode,
+    url,
+  };
 };
