@@ -1,7 +1,8 @@
-import { ComponentProps, useCallback, useEffect, useState } from "react";
+import type { ComponentProps } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-import { LikeButton } from "~/presentations/organisms/LikeButton";
-import { RuntimeMessageRequest, TabMessageRequest } from "~/types";
+import type { LikeButton } from "~/presentations/organisms/LikeButton";
+import type { RuntimeMessageRequest, TabMessageRequest } from "~/types";
 
 import { getNotionInfo } from "./getNotionInfo";
 

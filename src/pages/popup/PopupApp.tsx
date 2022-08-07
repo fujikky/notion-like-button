@@ -1,15 +1,9 @@
 import embededSettings from "embeded-settings";
-import {
-  ComponentProps,
-  VFC,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import type { ComponentProps } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { Settings } from "~/presentations/pages/Settings";
-import { SettingsValues } from "~/types";
+import type { SettingsValues } from "~/types";
 
 type Errors = ComponentProps<typeof Settings>["errors"];
 
@@ -47,7 +41,7 @@ const safeJsonParse = (data: unknown): unknown => {
   }
 };
 
-export const PopupApp: VFC = () => {
+export const PopupApp = () => {
   const [apiToken, setApiToken] = useState<string>();
   const [likeProp, setLikeProp] = useState<string>();
   const [hasChanges, setHasChanges] = useState(false);

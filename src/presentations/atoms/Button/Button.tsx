@@ -1,5 +1,5 @@
 import { styled } from "@linaria/react";
-import { ComponentPropsWithoutRef, ElementType } from "react";
+import type { ComponentPropsWithoutRef, ElementType } from "react";
 
 type Props<As extends ElementType = "button"> = {
   readonly as?: As;

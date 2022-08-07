@@ -1,5 +1,5 @@
 import { styled } from "@linaria/react";
-import { ComponentPropsWithoutRef, VFC } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 
 import { useFormControl } from "./FormControl";
 
@@ -27,7 +27,7 @@ const StyledInput = styled.input`
 
 type Props = ComponentPropsWithoutRef<"input">;
 
-export const Input: VFC<Props> = (props) => {
+export const Input = (props: Props) => {
   const { id, isInvalid } = useFormControl();
   return <StyledInput id={id} aria-invalid={isInvalid} {...props} />;
 };

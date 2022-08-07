@@ -1,5 +1,5 @@
 import { styled } from "@linaria/react";
-import { ReactNode, VFC } from "react";
+import type { ReactNode } from "react";
 
 type Props = {
   readonly pageMode: "page" | "popup";
@@ -32,7 +32,7 @@ const StylePopupInner = styled.div`
   bottom: 16px;
 `;
 
-export const NotionContainer: VFC<Props> = ({ pageMode, children }) =>
+export const NotionContainer = ({ pageMode, children }: Props) =>
   pageMode === "page" ? (
     <StylePageContainer>{children}</StylePageContainer>
   ) : (

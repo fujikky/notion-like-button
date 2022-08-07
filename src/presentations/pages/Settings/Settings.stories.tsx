@@ -1,5 +1,5 @@
 import { styled } from "@linaria/react";
-import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 import { Settings } from ".";
 

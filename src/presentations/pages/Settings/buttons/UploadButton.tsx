@@ -1,5 +1,6 @@
 import { styled } from "@linaria/react";
-import { ChangeEventHandler, ReactNode, VFC, useCallback, useRef } from "react";
+import type { ChangeEventHandler, ReactNode } from "react";
+import { useCallback, useRef } from "react";
 
 import { Button } from "~/presentations/atoms/Button";
 
@@ -20,7 +21,7 @@ const StyledIcon = styled.svg`
   fill: currentColor;
 `;
 
-export const UploadButton: VFC<Props> = ({ className, children, onUpload }) => {
+export const UploadButton = ({ className, children, onUpload }: Props) => {
   const ref = useRef<HTMLInputElement>(null);
   const handleClick = useCallback(() => ref.current?.click(), []);
   const handleChange = useCallback<ChangeEventHandler<HTMLInputElement>>(
@@ -29,6 +30,7 @@ export const UploadButton: VFC<Props> = ({ className, children, onUpload }) => {
       if (!files) return;
 
       const file = files[0];
+      if (!file) return;
       const mutableReader = new FileReader();
       mutableReader.onload = (e) => onUpload(e.target?.result);
       mutableReader.readAsText(file);

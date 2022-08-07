@@ -1,12 +1,6 @@
 import { styled } from "@linaria/react";
-import {
-  ReactNode,
-  VFC,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import type { ReactNode } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 type FormContextValue = {
   readonly id: string;
@@ -26,7 +20,7 @@ export const useFormControl = () => {
 type Props = {
   readonly fieldName: string;
   readonly isRequired?: boolean;
-  readonly error?: string;
+  readonly error?: string | undefined;
   readonly helperText?: ReactNode;
   readonly className?: string;
   readonly children: ReactNode;
@@ -66,14 +60,14 @@ const StyledHelperSpacer = styled.div`
   flex: 1;
 `;
 
-export const FormControl: VFC<Props> = ({
+export const FormControl = ({
   fieldName,
   isRequired,
   error,
   helperText,
   className,
   children,
-}) => {
+}: Props) => {
   const [value, setValue] = useState<FormContextValue>(() => ({
     id: genId(),
     isInvalid: !!error,

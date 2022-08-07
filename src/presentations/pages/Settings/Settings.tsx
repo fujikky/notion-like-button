@@ -1,5 +1,6 @@
 import { styled } from "@linaria/react";
-import { ChangeEventHandler, ComponentProps, VFC, useCallback } from "react";
+import type { ChangeEventHandler, ComponentProps } from "react";
+import { useCallback } from "react";
 
 import { Button } from "~/presentations/atoms/Button";
 import { FormControl, Input } from "~/presentations/atoms/FormControl";
@@ -14,7 +15,10 @@ type Props = {
   readonly apiToken: string;
   readonly likeProp: string;
   readonly isSaveButtonEnabled: boolean;
-  readonly errors: { readonly apiToken?: string; readonly likeProp?: string };
+  readonly errors: {
+    readonly apiToken?: string | undefined;
+    readonly likeProp?: string | undefined;
+  };
   readonly onApiTokenChange: (value: string) => void;
   readonly onLikePropChange: (value: string) => void;
   readonly onSave: () => void;
@@ -85,7 +89,7 @@ const StyledSaveButtonWrapper = styled.div`
   justify-content: flex-end;
 `;
 
-export const Settings: VFC<Props> = ({
+export const Settings = ({
   title,
   version,
   displaySettings,
@@ -98,7 +102,7 @@ export const Settings: VFC<Props> = ({
   onSave,
   onUpload,
   onDownload,
-}) => {
+}: Props) => {
   const handleApiTokenChange = useCallback<
     ChangeEventHandler<HTMLInputElement>
   >((e) => onApiTokenChange(e.currentTarget.value), [onApiTokenChange]);
