@@ -55,7 +55,7 @@
     "@types/react-dom": "18.0.9",
     "babel-loader": "9.1.0",
     "copy-webpack-plugin": "11.0.0",
-    "css-loader": "6.7.2",
+    "css-loader": "6.7.3",
     "eslint": "8.29.0",
     "eslint-config-timetree": "1.8.0",
     "mini-css-extract-plugin": "2.7.2",
