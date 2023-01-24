@@ -2431,10 +2431,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16-strictest/-/node16-strictest-1.0.4.tgz#14218b0341223d5caa692fa789fb374909690875"
   integrity sha512-kp6/DuAoKzHVv5U+p0uOesYbjrEvrYVNdQMl163a+yXXUv9twabvkCGEn3pmVxKXB45JU5MPGolDDWnONZL5ZQ==
 
-"@types/chrome@0.0.209":
-  version "0.0.209"
-  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.209.tgz#3c023bb9b4e51d317167b4459e2f58bbd1fbc49e"
-  integrity sha512-YL3gz9cAKKym/b+u26p8BQuKAc3USsPRcOYZ1OWQmOw0kfYBXkxrh9ASvSRgwA8ywA4sIahio0z0chzmmLq2og==
+"@types/chrome@0.0.210":
+  version "0.0.210"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.210.tgz#6bc137e111cf42857af5012d47c036adc079616e"
+  integrity sha512-VSjQu1k6a/rAfuqR1Gi/oxHZj4+t6+LG+GobNI3ZWI6DQ+fmphNSF6TrLHG6BYK2bXc9Gb4c1uXFKRRVLaGl5Q==
   dependencies:
     "@types/filesystem" "*"
     "@types/har-format" "*"
@@ -9601,12 +9601,12 @@ safe-buffer@5.1.1:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
   integrity sha512-kKvNJn6Mm93gAczWVJg7wH+wGYWNrDHdWvpUmHyEsgCtIwwo3bqPtV4tR5tuPaUhTOo/kvhVwd8XwwOllGYkbg==
 
-safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
+safe-buffer@5.1.2, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
 
-safe-buffer@5.2.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@^5.2.0:
+safe-buffer@5.2.1, safe-buffer@^5.2.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
