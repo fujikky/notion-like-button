@@ -1319,10 +1319,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@linaria/babel-preset@4.3.3", "@linaria/babel-preset@^4.3.3":
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/@linaria/babel-preset/-/babel-preset-4.3.3.tgz#563eaf30d6b8b28157ab6b88e161fd0c0fabaf62"
-  integrity sha512-/6FK2bDlJelX9kH65tFtk/qsIBLGXsZ+vwoEQ3m33AeHSSEL/syZwk3nyElvcTehPJChmMyntjy7brRIeoXnpw==
+"@linaria/babel-preset@4.4.0", "@linaria/babel-preset@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@linaria/babel-preset/-/babel-preset-4.4.0.tgz#393d55f9c7c7ae65ae5a82e334c4e5f6ce4ce3bc"
+  integrity sha512-QXd3L1FYgQkReExkBFAclrp1ddSz4xC8fgT4PBlFcojlmHxovrVSHx02n33rdO8UCsdOUhwV10uVQ6UYA+qKCA==
   dependencies:
     "@babel/core" "^7.20.2"
     "@babel/generator" "^7.20.4"
@@ -1330,24 +1330,24 @@
     "@babel/template" "^7.18.10"
     "@babel/traverse" "^7.20.1"
     "@babel/types" "^7.20.2"
-    "@linaria/core" "^4.2.5"
+    "@linaria/core" "^4.2.6"
     "@linaria/logger" "^4.0.0"
-    "@linaria/shaker" "^4.2.7"
-    "@linaria/tags" "^4.3.0"
-    "@linaria/utils" "^4.3.0"
-    cosmiconfig "^5.1.0"
+    "@linaria/shaker" "^4.2.8"
+    "@linaria/tags" "^4.3.1"
+    "@linaria/utils" "^4.3.1"
+    cosmiconfig "^8.0.0"
     find-up "^5.0.0"
     source-map "^0.7.3"
     stylis "^3.5.4"
 
-"@linaria/core@4.2.5", "@linaria/core@^4.2.5":
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/@linaria/core/-/core-4.2.5.tgz#0e8a54692556a08c209ac44e33aba062cb60a9b3"
-  integrity sha512-cRjF0utcr5yZa/aMdzW2aupSzlSwivfPWbjJGu/vQ8bKCTnuUnC9M+SrujnSQqQ7/kIHeZ98LfMxbfN3ZX6DPg==
+"@linaria/core@4.2.6", "@linaria/core@^4.2.6":
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/@linaria/core/-/core-4.2.6.tgz#dc78d1388d5aca793141a35b8b035deedfe48cfc"
+  integrity sha512-AKB3xh20KJ3ZPnynJkLd1X1y/qSDYu2HVHPXa28ouDbGoUpPLrl3/nsdoqalzu/igqnDYCOLqT9qXbuT3vG8ww==
   dependencies:
     "@linaria/logger" "^4.0.0"
-    "@linaria/tags" "^4.3.0"
-    "@linaria/utils" "^4.3.0"
+    "@linaria/tags" "^4.3.1"
+    "@linaria/utils" "^4.3.1"
 
 "@linaria/logger@^4.0.0":
   version "4.0.0"
@@ -1357,22 +1357,22 @@
     debug "^4.1.1"
     picocolors "^1.0.0"
 
-"@linaria/react@4.3.3":
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-4.3.3.tgz#fac276a5c63579109b0b6d5d714fcb227e461c5c"
-  integrity sha512-PK/dRyk+3v1vtHJkGTjf29AycWaVy9PN9WnZzRf+5WO2nALVUIkwgH3pMqz1sama2EooClHhga66qrvLyxKLDA==
+"@linaria/react@4.3.4":
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-4.3.4.tgz#d300cc97d9cabc0caeb6ba2346cc332c1fdedcdb"
+  integrity sha512-GZbXfD5jJyyTGotlskgsMjcm+Guh0riVDuSv5puxATXe96gG/lnRppR+MNG3iZp0pbsAOBjXOoveui6ldc2ZVg==
   dependencies:
     "@emotion/is-prop-valid" "^1.2.0"
-    "@linaria/core" "^4.2.5"
-    "@linaria/tags" "^4.3.0"
-    "@linaria/utils" "^4.3.0"
+    "@linaria/core" "^4.2.6"
+    "@linaria/tags" "^4.3.1"
+    "@linaria/utils" "^4.3.1"
     react-html-attributes "^1.4.6"
     ts-invariant "^0.10.3"
 
-"@linaria/shaker@4.2.7", "@linaria/shaker@^4.2.7":
-  version "4.2.7"
-  resolved "https://registry.yarnpkg.com/@linaria/shaker/-/shaker-4.2.7.tgz#07756eb55c2759fd32f8e4ab94893dd387a2d031"
-  integrity sha512-oGxlACd4BT/ph/eUpJPj1sIC32QuYBPsS3EbbATw3YPzHPo66NHlW9pyOCsAMj3wK1bs1vxgacbxSPo06ZyfRw==
+"@linaria/shaker@4.2.8", "@linaria/shaker@^4.2.8":
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/@linaria/shaker/-/shaker-4.2.8.tgz#c933e6bcd278ba43e44723eb9bf59b1cb179f687"
+  integrity sha512-+0ZZNNcNxLPiMFy/lEj9lkfyUMDnnP+A81PiqLXS2B8rJXfzgjuQDYVFRQ7Eh/ltw2+vLzUKEq+29jcFQq2AjQ==
   dependencies:
     "@babel/core" "^7.20.2"
     "@babel/generator" "^7.20.4"
@@ -1381,23 +1381,23 @@
     "@babel/plugin-transform-template-literals" "^7.18.9"
     "@babel/preset-env" "^7.20.2"
     "@linaria/logger" "^4.0.0"
-    "@linaria/utils" "^4.3.0"
+    "@linaria/utils" "^4.3.1"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
     ts-invariant "^0.10.3"
 
-"@linaria/tags@^4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@linaria/tags/-/tags-4.3.0.tgz#629062ad32f4ad84b4b5ba82297bdfc031754e47"
-  integrity sha512-ZFFZ+iuWg/3fvVeDVmnJVn0TSJYFlgA7SbZqN/Zx1FX/7EpM03lB1rprTV7svJyKKG46uqTXY7kdKCTwczmL1w==
+"@linaria/tags@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@linaria/tags/-/tags-4.3.1.tgz#fb4cfce6860a2594efcbd1f551c69061112dd85d"
+  integrity sha512-H1CgDYnZg8+TBiezoRxo6uBYWDzAqV/P+siFlbPGWgykzfqyO8p5XL/awk41sAdR07+2JhpXUowNUOEo7LJTYg==
   dependencies:
     "@babel/generator" "^7.20.4"
     "@linaria/logger" "^4.0.0"
-    "@linaria/utils" "^4.3.0"
+    "@linaria/utils" "^4.3.1"
 
-"@linaria/utils@^4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@linaria/utils/-/utils-4.3.0.tgz#3b3244cf73a64d66dba151a956d9168d23d9c480"
-  integrity sha512-TxAi4HbU1Ysjdb5H4Vc6jJ2A+jXC4YEQ69yVBbPk0iO/bD6JPtRapakwYQLlV/fEEcIIstzox2pX+/8G79oVtw==
+"@linaria/utils@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@linaria/utils/-/utils-4.3.1.tgz#7e4a43b4b88c21d9954c6236f3fca258fac80f2b"
+  integrity sha512-+Rx07/gpqUL8v9rcUs4kt8JS6UkcJn829iofNAf3jVcizl1FyOOD0wRTJPq4Rh5l3AsbUqFCYgoCkHHMAMgK5Q==
   dependencies:
     "@babel/core" "^7.20.2"
     "@babel/plugin-proposal-export-namespace-from" "^7.18.9"
@@ -1408,12 +1408,12 @@
     "@linaria/logger" "^4.0.0"
     babel-merge "^3.0.0"
 
-"@linaria/webpack5-loader@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@linaria/webpack5-loader/-/webpack5-loader-4.1.11.tgz#ed25f831b76a6a5036d331a3451ade2218b16e18"
-  integrity sha512-ixK0Nod+2jo8mOAYOLfLspxPoFtrK4p4TqGaIqKXYt3UORYQdVyPf7ABbgZhUHy6lZNgSnSv8e7HVgDCraZHZw==
+"@linaria/webpack5-loader@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@linaria/webpack5-loader/-/webpack5-loader-4.1.12.tgz#156305209ff2deff181ccb773b906ce918558929"
+  integrity sha512-TiOgXhDZbiFMo4g4isH2SM0E0ebPOqcYRIG6HQ8oVWJwFVk1cKQbTHhJbh5H1ovmWTaHPHlkY0m/gGynZPlsMQ==
   dependencies:
-    "@linaria/babel-preset" "^4.3.3"
+    "@linaria/babel-preset" "^4.4.0"
     "@linaria/logger" "^4.0.0"
     enhanced-resolve "^5.3.1"
     mkdirp "^0.5.1"
@@ -4007,25 +4007,6 @@ call-me-maybe@^1.0.1:
   resolved "https://registry.yarnpkg.com/call-me-maybe/-/call-me-maybe-1.0.2.tgz#03f964f19522ba643b1b0693acb9152fe2074baa"
   integrity sha512-HpX65o1Hnr9HH25ojC1YGs7HCQLq0GCOibSaWER0eNpgJ/Z1MZv2mTc7+xh6WOPxbRVcmgbv4hGU+uSQ/2xFZQ==
 
-caller-callsite@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/caller-callsite/-/caller-callsite-2.0.0.tgz#847e0fce0a223750a9a027c54b33731ad3154134"
-  integrity sha512-JuG3qI4QOftFsZyOn1qq87fq5grLIyk1JYd5lJmdA+fG7aQ9pA/i3JIJGcO3q0MrRcHlOt1U+ZeHW8Dq9axALQ==
-  dependencies:
-    callsites "^2.0.0"
-
-caller-path@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-2.0.0.tgz#468f83044e369ab2010fac5f06ceee15bb2cb1f4"
-  integrity sha512-MCL3sf6nCSXOwCTzvPKhN18TU7AHTvdtam8DAogxcrJ8Rjfbbg7Lgng64H9Iy+vUV6VGFClN/TyxBkAebLRR4A==
-  dependencies:
-    caller-callsite "^2.0.0"
-
-callsites@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/callsites/-/callsites-2.0.0.tgz#06eb84f00eea413da86affefacbffb36093b3c50"
-  integrity sha512-ksWePWBloaWPxJYQ8TL0JHvtci6G5QTKwQ95RcWAa/lzoAKuAOflGdAK92hpHXjkwb8zLxoLNUoNYZgVsaJzvQ==
-
 callsites@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
@@ -4481,16 +4462,6 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
   integrity sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
 
-cosmiconfig@^5.1.0:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.2.1.tgz#040f726809c591e77a17c0a3626ca45b4f168b1a"
-  integrity sha512-H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==
-  dependencies:
-    import-fresh "^2.0.0"
-    is-directory "^0.3.1"
-    js-yaml "^3.13.1"
-    parse-json "^4.0.0"
-
 cosmiconfig@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-6.0.0.tgz#da4fee853c52f6b1e6935f41c1a2fc50bd4a9982"
@@ -4512,6 +4483,16 @@ cosmiconfig@^7.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.10.0"
+
+cosmiconfig@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-8.0.0.tgz#e9feae014eab580f858f8a0288f38997a7bebe97"
+  integrity sha512-da1EafcpH6b/TD8vDRaWV7xFINlHlF6zKsGwS1TsuVJTZRkquaS5HTMq7uq6h31619QjbsYl21gVDOm32KM1vQ==
+  dependencies:
+    import-fresh "^3.2.1"
+    js-yaml "^4.1.0"
+    parse-json "^5.0.0"
+    path-type "^4.0.0"
 
 cp-file@^7.0.0:
   version "7.0.0"
@@ -6593,14 +6574,6 @@ ignore@^5.0.5, ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.4.tgz#a291c0c6178ff1b960befe47fcdec301674a6324"
   integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
 
-import-fresh@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-2.0.0.tgz#d81355c15612d386c61f9ddd3922d4304822a546"
-  integrity sha512-eZ5H8rcgYazHbKC3PG4ClHNykCSxtAhxSSEM+2mb+7evD2CKF5V7c0dNum7AdpDh0ZdICwZY9sRSn8f+KH96sg==
-  dependencies:
-    caller-path "^2.0.0"
-    resolve-from "^3.0.0"
-
 import-fresh@^3.0.0, import-fresh@^3.1.0, import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
@@ -6851,11 +6824,6 @@ is-descriptor@^1.0.0, is-descriptor@^1.0.2:
     is-accessor-descriptor "^1.0.0"
     is-data-descriptor "^1.0.0"
     kind-of "^6.0.2"
-
-is-directory@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/is-directory/-/is-directory-0.3.1.tgz#61339b6f2475fc772fd9c9d83f5c8575dc154ae1"
-  integrity sha512-yVChGzahRFvbkscn2MlwGismPO12i9+znNruC5gVEntG3qu0xQMzsGg/JFbrsqDOHtHFPci+V5aP5T9I+yeKqw==
 
 is-docker@^2.0.0, is-docker@^2.1.1:
   version "2.2.1"
@@ -9501,11 +9469,6 @@ resolve-cwd@^3.0.0:
   integrity sha512-OrZaX2Mb+rJCpH/6CpSqt9xFVpN++x01XnN2ie9g6P5/3xelLAkXWVADpdz1IHD/KFfEXyE6V0U01OQ3UO2rEg==
   dependencies:
     resolve-from "^5.0.0"
-
-resolve-from@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-3.0.0.tgz#b22c7af7d9d6881bc8b6e653335eebcb0a188748"
-  integrity sha512-GnlH6vxLymXJNMBo7XP1fJIzBFbdYt49CuTwmB/6N53t+kMPRMFKz783LlQ4tv28XoQfMWinAJX6WCGf2IlaIw==
 
 resolve-from@^4.0.0:
   version "4.0.0"
