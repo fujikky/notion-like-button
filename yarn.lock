@@ -1319,10 +1319,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@linaria/babel-preset@4.4.0", "@linaria/babel-preset@^4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@linaria/babel-preset/-/babel-preset-4.4.0.tgz#393d55f9c7c7ae65ae5a82e334c4e5f6ce4ce3bc"
-  integrity sha512-QXd3L1FYgQkReExkBFAclrp1ddSz4xC8fgT4PBlFcojlmHxovrVSHx02n33rdO8UCsdOUhwV10uVQ6UYA+qKCA==
+"@linaria/babel-preset@4.4.1", "@linaria/babel-preset@^4.4.1":
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/@linaria/babel-preset/-/babel-preset-4.4.1.tgz#f88cefe12ae7b82fc2a3d8c16aa263aa1222a7b7"
+  integrity sha512-C5z7gE70i62rtTPyCQaCskfT9jkoue2vO1RG+vxtuf/pKIdfHz177wFTzyfNVvLw+WVdhOtCyO8rzq6+4Tmnig==
   dependencies:
     "@babel/core" "^7.20.2"
     "@babel/generator" "^7.20.4"
@@ -1408,12 +1408,12 @@
     "@linaria/logger" "^4.0.0"
     babel-merge "^3.0.0"
 
-"@linaria/webpack5-loader@4.1.12":
-  version "4.1.12"
-  resolved "https://registry.yarnpkg.com/@linaria/webpack5-loader/-/webpack5-loader-4.1.12.tgz#156305209ff2deff181ccb773b906ce918558929"
-  integrity sha512-TiOgXhDZbiFMo4g4isH2SM0E0ebPOqcYRIG6HQ8oVWJwFVk1cKQbTHhJbh5H1ovmWTaHPHlkY0m/gGynZPlsMQ==
+"@linaria/webpack5-loader@4.1.13":
+  version "4.1.13"
+  resolved "https://registry.yarnpkg.com/@linaria/webpack5-loader/-/webpack5-loader-4.1.13.tgz#e0df2f579858453b97ff2aa4c387db3098bf5d04"
+  integrity sha512-8r+pEsRN/GnMmnvw3r3zji27p8vC6dcqpiyhWyOugSMrwzq24mUZiIGhWiVq78oEE3wPFqV/u3HHM9m3pxUlfg==
   dependencies:
-    "@linaria/babel-preset" "^4.4.0"
+    "@linaria/babel-preset" "^4.4.1"
     "@linaria/logger" "^4.0.0"
     enhanced-resolve "^5.3.1"
     mkdirp "^0.5.1"
