@@ -1364,10 +1364,10 @@
   resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
   integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
 
-"@linaria/babel-preset@4.4.4", "@linaria/babel-preset@^4.4.4":
-  version "4.4.4"
-  resolved "https://registry.yarnpkg.com/@linaria/babel-preset/-/babel-preset-4.4.4.tgz#19ce8c0f71ea3de2ae442728abaefab8b447c0ad"
-  integrity sha512-bB0WqQjZSPKO2J5E93JFPg4/Goe/59F2+KaTSsMRpomJPrID0+2x23zdup5WWejAuGyDA3UszYy0wjnZbM1Uog==
+"@linaria/babel-preset@4.4.5", "@linaria/babel-preset@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@linaria/babel-preset/-/babel-preset-4.4.5.tgz#f18d81dde708b46371018e16f07c2cafd52b4ab4"
+  integrity sha512-EqZeVDJrMomjSW/8Soo5ToprM9uYQbpRu8EwTqalwc4+l7anqKuHN9UfzO/Li9O8R+HJ1Lh1ywCoSulxpj268g==
   dependencies:
     "@babel/core" "^7.20.2"
     "@babel/generator" "^7.20.4"
@@ -1375,24 +1375,24 @@
     "@babel/template" "^7.18.10"
     "@babel/traverse" "^7.20.1"
     "@babel/types" "^7.20.2"
-    "@linaria/core" "^4.2.9"
+    "@linaria/core" "^4.2.10"
     "@linaria/logger" "^4.0.0"
-    "@linaria/shaker" "^4.2.10"
-    "@linaria/tags" "^4.3.4"
-    "@linaria/utils" "^4.3.3"
+    "@linaria/shaker" "^4.2.11"
+    "@linaria/tags" "^4.3.5"
+    "@linaria/utils" "^4.3.4"
     cosmiconfig "^8.0.0"
     find-up "^5.0.0"
     source-map "^0.7.3"
     stylis "^3.5.4"
 
-"@linaria/core@4.2.9", "@linaria/core@^4.2.9":
-  version "4.2.9"
-  resolved "https://registry.yarnpkg.com/@linaria/core/-/core-4.2.9.tgz#4917bde18d064a29cff4fd86aa99621f953a2a2c"
-  integrity sha512-ELcu37VNVOT/PU0L6WDIN+aLzNFyJrqoBYT0CucGOCAmODbojUMCv8oJYRbWzA3N34w1t199dN4UFdfRWFG2rg==
+"@linaria/core@4.2.10", "@linaria/core@^4.2.10":
+  version "4.2.10"
+  resolved "https://registry.yarnpkg.com/@linaria/core/-/core-4.2.10.tgz#3f8d45b20205c167d326d558ee9a926039483767"
+  integrity sha512-S1W01W7L4SQnGpWzp8awyCpPIYUOEJ+OLjjXqKpIXOU+ozPwBt86Mjjdas9aZccVhNBWDja74cMCUAVp8yUpDQ==
   dependencies:
     "@linaria/logger" "^4.0.0"
-    "@linaria/tags" "^4.3.4"
-    "@linaria/utils" "^4.3.3"
+    "@linaria/tags" "^4.3.5"
+    "@linaria/utils" "^4.3.4"
 
 "@linaria/logger@^4.0.0":
   version "4.0.0"
@@ -1402,22 +1402,22 @@
     debug "^4.1.1"
     picocolors "^1.0.0"
 
-"@linaria/react@4.3.7":
-  version "4.3.7"
-  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-4.3.7.tgz#32075b2a42dff5685d22ba4163ff56c33c7c5dd7"
-  integrity sha512-bU+fr0EKJFG5weyzJIIlKrwdCRN116A4ab+U9y9l0LW0zQ1FXlIK61X2nbd8f+v4MwswA1QKSX/tZD+NvnRKKQ==
+"@linaria/react@4.3.8":
+  version "4.3.8"
+  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-4.3.8.tgz#f66341371740cf361853a5206450afde79712161"
+  integrity sha512-+Io4PXXyopxiSemk+5QdyqF4+uJJwVUx9yIhUrVJhKluwyJ0KsNA00gY+d5wpT5FhTsnVpv4Ef3YEcPHcVUuow==
   dependencies:
     "@emotion/is-prop-valid" "^1.2.0"
-    "@linaria/core" "^4.2.9"
-    "@linaria/tags" "^4.3.4"
-    "@linaria/utils" "^4.3.3"
+    "@linaria/core" "^4.2.10"
+    "@linaria/tags" "^4.3.5"
+    "@linaria/utils" "^4.3.4"
     react-html-attributes "^1.4.6"
     ts-invariant "^0.10.3"
 
-"@linaria/shaker@4.2.10", "@linaria/shaker@^4.2.10":
-  version "4.2.10"
-  resolved "https://registry.yarnpkg.com/@linaria/shaker/-/shaker-4.2.10.tgz#e6bad1eb87fb6566fa053661c8446b478503f42d"
-  integrity sha512-2VM0aOUZOeRBvne3fw36dIDu0yYzg0sLOT+kh1MvVmEen6uk4TphK3JoDVg/IWy8iAigv7w93AuJ5s8H5IiTlQ==
+"@linaria/shaker@4.2.11", "@linaria/shaker@^4.2.11":
+  version "4.2.11"
+  resolved "https://registry.yarnpkg.com/@linaria/shaker/-/shaker-4.2.11.tgz#28cdedb4a667b0ab044d2d3fb11b11267c915dec"
+  integrity sha512-4QEMHoxWI/zH8tjuIa4y3tfrW3bWmRPxNGZ66IdSm19IivWMRxWl+viYHCDn3lL7JQTXn1MURsEopVmUs4p2Lw==
   dependencies:
     "@babel/core" "^7.20.2"
     "@babel/generator" "^7.20.4"
@@ -1426,23 +1426,23 @@
     "@babel/plugin-transform-template-literals" "^7.18.9"
     "@babel/preset-env" "^7.20.2"
     "@linaria/logger" "^4.0.0"
-    "@linaria/utils" "^4.3.3"
+    "@linaria/utils" "^4.3.4"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
     ts-invariant "^0.10.3"
 
-"@linaria/tags@^4.3.4":
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/@linaria/tags/-/tags-4.3.4.tgz#3c98108e4b48b8413662b4c62c2b2abdebacaca4"
-  integrity sha512-W8zaLKtC4YFCwkZ9DMu2enCiD/zGyYmFSTzEvJP7ZycdftMizoOrWNOyF9kITyjGdq+jZvAXJz0BZDT6axgIRg==
+"@linaria/tags@^4.3.5":
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/@linaria/tags/-/tags-4.3.5.tgz#bf2e070d11179addf2f27a66cd29d8192e71ca89"
+  integrity sha512-PgaIi8Vv89YOjc6rpKL/uPg2w4k0rAwAYxcqeXqzKqsEAste5rgB8xp1/KUOG0oAOkPd3MRL6Duj+m0ZwJ3g+g==
   dependencies:
     "@babel/generator" "^7.20.4"
     "@linaria/logger" "^4.0.0"
-    "@linaria/utils" "^4.3.3"
+    "@linaria/utils" "^4.3.4"
 
-"@linaria/utils@^4.3.3":
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/@linaria/utils/-/utils-4.3.3.tgz#9f66ae41187e8a2f2cc3471b44935128ebd1dab3"
-  integrity sha512-xSe/tod9A44aIMbtds9fWLNe2TT080lLdRSaoqX+UHsBWqClkrw5cXEt3lm8Vr4hZiXT2r/1AldjuHb9YbUlMg==
+"@linaria/utils@^4.3.4":
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/@linaria/utils/-/utils-4.3.4.tgz#860db9131e498b62510e49dc6fd4a8f0ed44bf4d"
+  integrity sha512-vt6WJG54n+KANaqxOfzIIU7aSfFHEWFbnGLsgxL7nASHqO0zezrNA2y2Rrp80zSeTW+wSpbmDM4uJyC9UW1qoA==
   dependencies:
     "@babel/core" "^7.20.2"
     "@babel/plugin-proposal-export-namespace-from" "^7.18.9"
@@ -1453,12 +1453,12 @@
     "@linaria/logger" "^4.0.0"
     babel-merge "^3.0.0"
 
-"@linaria/webpack5-loader@4.1.16":
-  version "4.1.16"
-  resolved "https://registry.yarnpkg.com/@linaria/webpack5-loader/-/webpack5-loader-4.1.16.tgz#4e5cb882265ca71b9ea38bc3f2e395ec3c278453"
-  integrity sha512-3c7Uxk/ZdyAh5wLqTEblr/bOGnFC4yhp6mI5mLA6BlMu+t9qC5IrQXF4TgZ6w+thTKlimo8/9o9QE53DOxIOnw==
+"@linaria/webpack5-loader@4.1.17":
+  version "4.1.17"
+  resolved "https://registry.yarnpkg.com/@linaria/webpack5-loader/-/webpack5-loader-4.1.17.tgz#0f4acecafba9a765ce77759672ac89b93a889df2"
+  integrity sha512-KJHCyPYoUzvqz+X8jTcf23dpPDmZXPiJcTpy2/oRsEnYpSoKN6MVvoPNxNiMi/csNkMaSHoYJ4no8n8mq/mo9g==
   dependencies:
-    "@linaria/babel-preset" "^4.4.4"
+    "@linaria/babel-preset" "^4.4.5"
     "@linaria/logger" "^4.0.0"
     enhanced-resolve "^5.3.1"
     mkdirp "^0.5.1"
