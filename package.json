@@ -26,8 +26,8 @@
     "url": "https://github.com/fujikky/notion-like-button.git"
   },
   "dependencies": {
-    "@linaria/core": "4.5.1",
-    "@linaria/react": "4.5.1",
+    "@linaria/core": "4.5.2",
+    "@linaria/react": "4.5.2",
     "@notionhq/client": "2.2.7",
     "@xobotyi/scrollbar-width": "1.9.5",
     "react": "18.2.0",
@@ -38,9 +38,9 @@
     "@babel/preset-env": "7.22.9",
     "@babel/preset-react": "7.22.5",
     "@babel/preset-typescript": "7.22.5",
-    "@linaria/babel-preset": "4.5.1",
-    "@linaria/shaker": "4.5.0",
-    "@linaria/webpack5-loader": "4.5.1",
+    "@linaria/babel-preset": "4.5.2",
+    "@linaria/shaker": "4.5.1",
+    "@linaria/webpack5-loader": "4.5.2",
     "@storybook/addon-actions": "7.0.27",
     "@storybook/addon-essentials": "7.0.27",
     "@storybook/addon-links": "7.0.27",
