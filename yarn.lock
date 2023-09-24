@@ -1491,10 +1491,10 @@
   resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
   integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
 
-"@linaria/babel-preset@5.0.1", "@linaria/babel-preset@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@linaria/babel-preset/-/babel-preset-5.0.1.tgz#71e5cfbe31ad505b2223d787cf436ec732de0c95"
-  integrity sha512-jXhOH3KtbjbY0edetYQakgFcV49OlzUOmtFseV/yKXOvV6mmPJ+COiqegvIkxKKgrB7sjqE2Q1Edc1t2EztUlg==
+"@linaria/babel-preset@5.0.2", "@linaria/babel-preset@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@linaria/babel-preset/-/babel-preset-5.0.2.tgz#248a733a416d343f60c2d8cbebc2da47ee877def"
+  integrity sha512-QBDHii/tS5xs4oi8KFU/pxnsicv/kjuI95dlRzPUJc/yJUyPQGjFYWHV7OEw2h8p9Em5HOmY+//lyA4g+U5JOg==
   dependencies:
     "@babel/core" "^7.22.15"
     "@babel/generator" "^7.22.15"
@@ -1584,12 +1584,12 @@
     find-up "^5.0.0"
     minimatch "^9.0.3"
 
-"@linaria/webpack5-loader@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@linaria/webpack5-loader/-/webpack5-loader-5.0.1.tgz#7303aa4d91657da9cd188c5967bee25629d85532"
-  integrity sha512-vjqRNVE6nRZMicDcl6Pwo1XMmIM8vE0pLw2ZrAwDej07cXUvhnx9tahwP6zIAryvOVnba4zuoZGrm456JM4RVg==
+"@linaria/webpack5-loader@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@linaria/webpack5-loader/-/webpack5-loader-5.0.2.tgz#f7c34a173e97bfdfb57ae085577d068da6886110"
+  integrity sha512-br88/CwY3J0UzYvvb6O2AwSoDh1xXmgnijcM4nMB2YscdzlhTjT3HKShtkyRXV2obFsP7REPx5MIq0Fmi8kjCw==
   dependencies:
-    "@linaria/babel-preset" "^5.0.1"
+    "@linaria/babel-preset" "^5.0.2"
     "@linaria/logger" "^5.0.0"
     "@linaria/utils" "^5.0.1"
     enhanced-resolve "^5.3.1"
