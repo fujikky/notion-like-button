@@ -1530,10 +1530,10 @@
     debug "^4.3.4"
     picocolors "^1.0.0"
 
-"@linaria/react@5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-5.0.2.tgz#ce5b3609f45c65e3784140eedf77538c9dd04f5b"
-  integrity sha512-jZ7AJNbHoB2+0V+o69mKJpizBXjVcU33tbCPJCSFJDENRc9/9Ai9XQiNTmDAGQX3pYpcP8/k2PMB1Sg0Zvb3Qw==
+"@linaria/react@5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-5.0.3.tgz#cce1bd8b5487117465f0560cda57f0b7855dbde1"
+  integrity sha512-faTQHnUlrAz0Lodu+rr6Yx59rX0nqFOrZ5/IdlfQcTRz9VebyVL4vtA3AOecmn1YFZjMpqjopT0OzNz6GknQSg==
   dependencies:
     "@emotion/is-prop-valid" "^1.2.0"
     "@linaria/core" "^5.0.2"
