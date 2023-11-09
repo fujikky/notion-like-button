@@ -34,10 +34,10 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "7.23.2",
-    "@babel/preset-env": "7.23.2",
-    "@babel/preset-react": "7.22.15",
-    "@babel/preset-typescript": "7.23.2",
+    "@babel/core": "7.23.3",
+    "@babel/preset-env": "7.23.3",
+    "@babel/preset-react": "7.23.3",
+    "@babel/preset-typescript": "7.23.3",
     "@linaria/babel-preset": "5.0.3",
     "@linaria/shaker": "5.0.2",
     "@linaria/webpack5-loader": "5.0.3",
