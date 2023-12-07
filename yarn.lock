@@ -1521,7 +1521,14 @@
     stylis "^3.5.4"
     ts-invariant "^0.10.3"
 
-"@linaria/core@5.0.2", "@linaria/core@^5.0.2":
+"@linaria/core@6.0.0", "@linaria/core@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@linaria/core/-/core-6.0.0.tgz#f75b815f28db960d23ece8b619101d71336b572b"
+  integrity sha512-baRaaL1RGd6+DSB4HZhTfJWa214DaQXn0M3CLaPAwouoM4sU2ZF64X6aQ/L5fCbdNCN7SNNf5DtcWAxWC2bjLA==
+  dependencies:
+    "@wyw-in-js/processor-utils" "^0.2.2"
+
+"@linaria/core@^5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@linaria/core/-/core-5.0.2.tgz#73521779af66a1434ef39c9d0cb07e2fd7e692c5"
   integrity sha512-l5jQq7w9kDvonfr/0MBF47Dagx9Y9f/o5Q8j3zv7GepwG/yHQdbjKr0tq07rx2fSDDX7Nbqlxk6k9Ymir/NGpg==
@@ -1538,15 +1545,15 @@
     debug "^4.3.4"
     picocolors "^1.0.0"
 
-"@linaria/react@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-5.0.3.tgz#cce1bd8b5487117465f0560cda57f0b7855dbde1"
-  integrity sha512-faTQHnUlrAz0Lodu+rr6Yx59rX0nqFOrZ5/IdlfQcTRz9VebyVL4vtA3AOecmn1YFZjMpqjopT0OzNz6GknQSg==
+"@linaria/react@6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-6.0.0.tgz#40bed19c12ffbc4d3b4c35c238fd3a82f3191ee1"
+  integrity sha512-rzvaNIT9d5dxIiTew2ZYiYkuiuCCOiK6SLv+rmdewAFN6e5Ywd17UlwOEiIhRoJYmZktiMwPzb03m9+dLjGPhg==
   dependencies:
     "@emotion/is-prop-valid" "^1.2.0"
-    "@linaria/core" "^5.0.2"
-    "@linaria/tags" "^5.0.2"
-    "@linaria/utils" "^5.0.2"
+    "@linaria/core" "^6.0.0"
+    "@wyw-in-js/processor-utils" "^0.2.2"
+    "@wyw-in-js/shared" "^0.2.2"
     minimatch "^9.0.3"
     react-html-attributes "^1.4.6"
     ts-invariant "^0.10.3"
@@ -3290,6 +3297,23 @@
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/@webpack-cli/serve/-/serve-2.0.5.tgz#325db42395cd49fe6c14057f9a900e427df8810e"
   integrity sha512-lqaoKnRYBdo1UgDX8uF24AfGMifWK19TxPmM5FHc2vAGxrJ/qtyUyFBWoY1tISZdelsQ5fBcOusifo5o5wSJxQ==
+
+"@wyw-in-js/processor-utils@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@wyw-in-js/processor-utils/-/processor-utils-0.2.2.tgz#f4494bca8c2359fcabac95d44c88f1795186386b"
+  integrity sha512-8jGKcdWb6XwuvHu9FAmBD9FOCCkoiU/FLb/GpEewSlT9sX17d4FZjzqIpKOZloMKH5PN3nuudTnT0Xrh6yLy2Q==
+  dependencies:
+    "@babel/generator" "^7.23.5"
+    "@wyw-in-js/shared" "0.2.2"
+
+"@wyw-in-js/shared@0.2.2", "@wyw-in-js/shared@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@wyw-in-js/shared/-/shared-0.2.2.tgz#23d0936510e43a6916725a5d8ad45e4beae463e7"
+  integrity sha512-5ClcaHLYykswtQldwWIyCRYJAin44VVTNUPTMFcAdZGU6jrSmz4c9xDbbpWcaruwNLuV8c2eq8xOUzF0BRjbjg==
+  dependencies:
+    debug "^4.3.4"
+    find-up "^5.0.0"
+    minimatch "^9.0.3"
 
 "@xobotyi/scrollbar-width@1.9.5":
   version "1.9.5"
