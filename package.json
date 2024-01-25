@@ -48,7 +48,7 @@
     "@storybook/manager-webpack5": "6.5.16",
     "@storybook/react": "7.0.27",
     "@tsconfig/node16-strictest": "1.0.4",
-    "@types/chrome": "0.0.258",
+    "@types/chrome": "0.0.259",
     "@types/jest": "29.5.11",
     "@types/mini-css-extract-plugin": "2.5.1",
     "@types/react": "18.2.48",
