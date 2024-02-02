@@ -58,7 +58,7 @@
     "css-loader": "6.10.0",
     "eslint": "8.56.0",
     "eslint-config-timetree": "1.8.0",
-    "mini-css-extract-plugin": "2.7.7",
+    "mini-css-extract-plugin": "2.8.0",
     "npm-run-all2": "6.1.2",
     "prettier": "2.8.8",
     "rimraf": "5.0.5",
