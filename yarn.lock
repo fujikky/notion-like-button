@@ -1519,12 +1519,12 @@
     stylis "^3.5.4"
     ts-invariant "^0.10.3"
 
-"@linaria/core@6.0.0", "@linaria/core@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@linaria/core/-/core-6.0.0.tgz#f75b815f28db960d23ece8b619101d71336b572b"
-  integrity sha512-baRaaL1RGd6+DSB4HZhTfJWa214DaQXn0M3CLaPAwouoM4sU2ZF64X6aQ/L5fCbdNCN7SNNf5DtcWAxWC2bjLA==
+"@linaria/core@6.1.0", "@linaria/core@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@linaria/core/-/core-6.1.0.tgz#0621151fa775b7ea06eda21dc7ebde39c2d880ad"
+  integrity sha512-absw9pHz1FBGZ9yo0/Zqoj6xubAI+liADMzNTCt8cwwFawAUspciTBZIA28yjQ7aqyRakO0Yq4zAKQeUhWKPTQ==
   dependencies:
-    "@wyw-in-js/processor-utils" "^0.2.2"
+    "@wyw-in-js/processor-utils" "^0.4.0"
 
 "@linaria/core@^5.0.2":
   version "5.0.2"
@@ -1543,15 +1543,15 @@
     debug "^4.3.4"
     picocolors "^1.0.0"
 
-"@linaria/react@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-6.0.0.tgz#40bed19c12ffbc4d3b4c35c238fd3a82f3191ee1"
-  integrity sha512-rzvaNIT9d5dxIiTew2ZYiYkuiuCCOiK6SLv+rmdewAFN6e5Ywd17UlwOEiIhRoJYmZktiMwPzb03m9+dLjGPhg==
+"@linaria/react@6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@linaria/react/-/react-6.1.0.tgz#a5c807329232b193c82610fb394973da4777d243"
+  integrity sha512-xNRTAygvxAgLJxHLmudJyiNZS1yGXEoKqHFAeEdm2vz0WzlTflnvmN16X311ZbxHRToa3lKHxfxwDnPB/oni+Q==
   dependencies:
     "@emotion/is-prop-valid" "^1.2.0"
-    "@linaria/core" "^6.0.0"
-    "@wyw-in-js/processor-utils" "^0.2.2"
-    "@wyw-in-js/shared" "^0.2.2"
+    "@linaria/core" "^6.1.0"
+    "@wyw-in-js/processor-utils" "^0.4.0"
+    "@wyw-in-js/shared" "^0.4.0"
     minimatch "^9.0.3"
     react-html-attributes "^1.4.6"
     ts-invariant "^0.10.3"
@@ -3301,18 +3301,18 @@
   resolved "https://registry.yarnpkg.com/@webpack-cli/serve/-/serve-2.0.5.tgz#325db42395cd49fe6c14057f9a900e427df8810e"
   integrity sha512-lqaoKnRYBdo1UgDX8uF24AfGMifWK19TxPmM5FHc2vAGxrJ/qtyUyFBWoY1tISZdelsQ5fBcOusifo5o5wSJxQ==
 
-"@wyw-in-js/processor-utils@^0.2.2":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@wyw-in-js/processor-utils/-/processor-utils-0.2.3.tgz#d689db596ffbf7a93028ad23b70150f45fe53810"
-  integrity sha512-p/j0B94hHUClLNKdXzqM5PedIs+OVSlFOH7aAk5g/8Wm9Rt/cOBp95D4sdazr1IekuqA0OqRmLPyb9Z97gJzUw==
+"@wyw-in-js/processor-utils@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@wyw-in-js/processor-utils/-/processor-utils-0.4.0.tgz#eea2efed12270a573a3532e22f13c5020d9efbd1"
+  integrity sha512-Y4285eV+rmZUXnsH1WeoPjey9QalJXmn8/3KvNOlK4ymfyTt9ghveQlYynJ2UmmwXDvbk0rbVEXACG8GTF2GEA==
   dependencies:
     "@babel/generator" "^7.23.5"
-    "@wyw-in-js/shared" "0.2.3"
+    "@wyw-in-js/shared" "0.4.0"
 
-"@wyw-in-js/shared@0.2.3", "@wyw-in-js/shared@^0.2.2":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@wyw-in-js/shared/-/shared-0.2.3.tgz#dc46ad32ab9855dc29a4c6e43e8f5037e7660b5b"
-  integrity sha512-zOzogN+scf1v/h6TMxtICtHcvp3x1lp9ZrKAMTIVvvKefxx6Z2Tf5DTRDJDcpC+ibojcv3lb+A2QO/Tl1mS/SQ==
+"@wyw-in-js/shared@0.4.0", "@wyw-in-js/shared@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@wyw-in-js/shared/-/shared-0.4.0.tgz#56fffc736947e1c85f9ec4d2289f1f2dd8b3b360"
+  integrity sha512-7gER7khdNM6r6zLA428gdQrdSCLWmZmZexBhSTKPmqFFa/WIxL2/vPAceMw8Q5SAm1xctq2OcU4kKnXi29MBgA==
   dependencies:
     debug "^4.3.4"
     find-up "^5.0.0"
