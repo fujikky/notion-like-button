@@ -11,9 +11,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          cache: yarn
       - name: yarn install
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: |
+          corepack enable
+          yarn install --immutable
       - uses: release-drafter/release-drafter@v6
         id: release_drafter
         env:
