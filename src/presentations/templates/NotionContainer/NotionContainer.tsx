@@ -14,7 +14,7 @@ const StylePageContainer = styled.div`
   z-index: 1000;
   pointer-events: none;
   position: fixed;
-  right: 64px;
+  right: 126px;
   bottom: 16px;
 `;
 
