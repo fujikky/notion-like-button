@@ -1,9 +1,9 @@
-import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { useCallback, useState } from "react";
 
 import { LikeButton } from ".";
 
-type Story = ComponentStoryObj<typeof LikeButton>;
+type Story = StoryObj<typeof LikeButton>;
 
 export default {
   component: LikeButton,
@@ -13,7 +13,7 @@ export default {
     isSubmitting: false,
     withAnimation: false,
   },
-} as ComponentMeta<typeof LikeButton>;
+} as Meta<typeof LikeButton>;
 
 export const Default: Story = {};
 

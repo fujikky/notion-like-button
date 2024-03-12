@@ -1,8 +1,8 @@
-import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 import { FormControl, Input } from ".";
 
-type Story = ComponentStoryObj<typeof FormControl>;
+type Story = StoryObj<typeof FormControl>;
 
 export default {
   component: FormControl,
@@ -10,7 +10,7 @@ export default {
     fieldName: "Name",
     children: <Input placeholder="test" />,
   },
-} as ComponentMeta<typeof FormControl>;
+} as Meta<typeof FormControl>;
 
 export const Default: Story = {};
 
