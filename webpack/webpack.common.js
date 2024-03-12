@@ -38,7 +38,7 @@ module.exports = {
         use: [
           { loader: "babel-loader" },
           {
-            loader: "@linaria/webpack5-loader",
+            loader: "@wyw-in-js/webpack-loader",
             options: {
               sourceMap: process.env.NODE_ENV !== "production",
             },

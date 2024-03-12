@@ -1,13 +1,10 @@
-import { StorybookConfig } from "@storybook/react/types";
+import { StorybookConfig } from "@storybook/react-webpack5";
 import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
-  framework: "@storybook/react",
-  core: {
-    builder: "webpack5",
-  },
+  framework: "@storybook/react-webpack5",
   staticDirs: ["../public"],
   webpackFinal: (config) => ({
     ...config,
@@ -18,7 +15,7 @@ module.exports = {
         {
           test: /\.tsx?$/,
           exclude: /node_modules/,
-          use: [{ loader: "@linaria/webpack-loader" }],
+          use: [{ loader: "@wyw-in-js/webpack-loader" }],
         },
       ],
     },
