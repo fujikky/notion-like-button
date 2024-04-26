@@ -2047,20 +2047,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@linaria/react@npm:6.1.0":
-  version: 6.1.0
-  resolution: "@linaria/react@npm:6.1.0"
+"@linaria/react@npm:6.2.0":
+  version: 6.2.0
+  resolution: "@linaria/react@npm:6.2.0"
   dependencies:
     "@emotion/is-prop-valid": "npm:^1.2.0"
     "@linaria/core": "npm:^6.1.0"
-    "@wyw-in-js/processor-utils": "npm:^0.4.0"
-    "@wyw-in-js/shared": "npm:^0.4.0"
+    "@wyw-in-js/processor-utils": "npm:^0.5.3"
+    "@wyw-in-js/shared": "npm:^0.5.3"
     minimatch: "npm:^9.0.3"
     react-html-attributes: "npm:^1.4.6"
+    resolve: "npm:^1.22.8"
     ts-invariant: "npm:^0.10.3"
   peerDependencies:
     react: ">=16"
-  checksum: 10c0/16dbf386a256fafca1ace1d452ba29db36586501994974f1ca9d557ba0afc96def9c1069ef4782818e57ba016b5d33c941acd37984a5e941480cfd31dd08e870
+  checksum: 10c0/11d8d432f20cd0fdc2fca4d01848be9242fa0ee8a39a20caacf738f5f6847db56b1f36b3feb59ddc23347bdaa1af132de9fb53ea8d91855b5ca78ce52b1acbcc
   languageName: node
   linkType: hard
 
@@ -4567,7 +4568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/processor-utils@npm:0.5.3":
+"@wyw-in-js/processor-utils@npm:0.5.3, @wyw-in-js/processor-utils@npm:^0.5.3":
   version: 0.5.3
   resolution: "@wyw-in-js/processor-utils@npm:0.5.3"
   dependencies:
@@ -4587,7 +4588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/shared@npm:0.4.1, @wyw-in-js/shared@npm:^0.4.0":
+"@wyw-in-js/shared@npm:0.4.1":
   version: 0.4.1
   resolution: "@wyw-in-js/shared@npm:0.4.1"
   dependencies:
@@ -4598,7 +4599,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/shared@npm:0.5.3":
+"@wyw-in-js/shared@npm:0.5.3, @wyw-in-js/shared@npm:^0.5.3":
   version: 0.5.3
   resolution: "@wyw-in-js/shared@npm:0.5.3"
   dependencies:
@@ -9911,7 +9912,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.24.1"
     "@linaria/babel-preset": "npm:5.0.4"
     "@linaria/core": "npm:6.1.0"
-    "@linaria/react": "npm:6.1.0"
+    "@linaria/react": "npm:6.2.0"
     "@linaria/shaker": "npm:5.0.3"
     "@notionhq/client": "npm:2.2.7"
     "@storybook/addon-actions": "npm:7.6.18"
@@ -11282,7 +11283,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.10.0, resolve@npm:^1.14.2, resolve@npm:^1.20.0, resolve@npm:^1.22.1, resolve@npm:^1.22.4":
+"resolve@npm:^1.10.0, resolve@npm:^1.14.2, resolve@npm:^1.20.0, resolve@npm:^1.22.1, resolve@npm:^1.22.4, resolve@npm:^1.22.8":
   version: 1.22.8
   resolution: "resolve@npm:1.22.8"
   dependencies:
@@ -11308,7 +11309,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.14.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.4#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.14.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.4#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.8#optional!builtin<compat/resolve>":
   version: 1.22.8
   resolution: "resolve@patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d"
   dependencies:
