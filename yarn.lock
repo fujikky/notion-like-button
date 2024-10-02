@@ -5149,13 +5149,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:0.0.273":
-  version: 0.0.273
-  resolution: "@types/chrome@npm:0.0.273"
+"@types/chrome@npm:0.0.275":
+  version: 0.0.275
+  resolution: "@types/chrome@npm:0.0.275"
   dependencies:
     "@types/filesystem": "npm:*"
     "@types/har-format": "npm:*"
-  checksum: 10c0/7f870bbe51663fc9c591ff3f0b2e08bc1a3a9c8e736bd9ea9c1c3dfe1a2081a1f56de3fb9dbf084d2f1bd4a95f916eee9a71ff01bd7995c761b416425446aa8d
+  checksum: 10c0/4def7f8f8de812582db3f8f7c1831ca66114da420038c3a55b841404e426cffd48b48cb1950aae427b857198e702a50e0d53e1f75be7adbc871c64c5f05c0afa
   languageName: node
   linkType: hard
 
@@ -5475,13 +5475,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:18.3.10, @types/react@npm:>=16":
+"@types/react@npm:*, @types/react@npm:>=16":
   version: 18.3.10
   resolution: "@types/react@npm:18.3.10"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10c0/f5be1de1b0331c1fdb33d577f4cf7f1b949d4bded5347b2351a537f03c51dade5be115e21b161dcf1b37061954d320f6a0bdf8d7b70e24eda51071fdd614383d
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:18.3.11":
+  version: 18.3.11
+  resolution: "@types/react@npm:18.3.11"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/ce80512246ca5bda69db85b9f4f1835189334acfb6b2c4f3eda8cabff1ff1a3ea9ce4f3b895bdbc18c94140aa45592331aa3fdeb557f525c1b048de7ce84fc0e
   languageName: node
   linkType: hard
 
@@ -11310,10 +11320,10 @@ __metadata:
     "@storybook/react": "npm:7.6.20"
     "@storybook/react-webpack5": "npm:7.6.20"
     "@tsconfig/node16-strictest": "npm:1.0.4"
-    "@types/chrome": "npm:0.0.273"
+    "@types/chrome": "npm:0.0.275"
     "@types/jest": "npm:29.5.13"
     "@types/mini-css-extract-plugin": "npm:2.5.1"
-    "@types/react": "npm:18.3.10"
+    "@types/react": "npm:18.3.11"
     "@types/react-dom": "npm:18.3.0"
     "@wyw-in-js/webpack-loader": "npm:0.5.4"
     "@xobotyi/scrollbar-width": "npm:1.9.5"
