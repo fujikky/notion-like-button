@@ -1226,7 +1226,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:7.25.9, @babel/preset-react@npm:^7.22.15":
+"@babel/preset-react@npm:7.26.3":
+  version: 7.26.3
+  resolution: "@babel/preset-react@npm:7.26.3"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.25.9"
+    "@babel/helper-validator-option": "npm:^7.25.9"
+    "@babel/plugin-transform-react-display-name": "npm:^7.25.9"
+    "@babel/plugin-transform-react-jsx": "npm:^7.25.9"
+    "@babel/plugin-transform-react-jsx-development": "npm:^7.25.9"
+    "@babel/plugin-transform-react-pure-annotations": "npm:^7.25.9"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 10c0/b470dcba11032ef6c832066f4af5c75052eaed49feb0f445227231ef1b5c42aacd6e216988c0bd469fd5728cd27b6b059ca307c9ecaa80c6bb5da4bf1c833e12
+  languageName: node
+  linkType: hard
+
+"@babel/preset-react@npm:^7.22.15":
   version: 7.25.9
   resolution: "@babel/preset-react@npm:7.25.9"
   dependencies:
@@ -9815,7 +9831,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:7.26.0"
     "@babel/preset-env": "npm:7.26.0"
-    "@babel/preset-react": "npm:7.25.9"
+    "@babel/preset-react": "npm:7.26.3"
     "@babel/preset-typescript": "npm:7.26.0"
     "@linaria/babel-preset": "npm:5.0.4"
     "@linaria/core": "npm:6.2.0"
