@@ -3753,13 +3753,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:0.0.289":
-  version: 0.0.289
-  resolution: "@types/chrome@npm:0.0.289"
+"@types/chrome@npm:0.0.290":
+  version: 0.0.290
+  resolution: "@types/chrome@npm:0.0.290"
   dependencies:
     "@types/filesystem": "npm:*"
     "@types/har-format": "npm:*"
-  checksum: 10c0/e8085ec710a4b790a85e3ca7abfa6e0908d39b0362437355ca3859df62ead83036f8793f146abb4b58b6bd176db5598c0e09d67a97eb0267913dac6174032cb1
+  checksum: 10c0/527ee5a06af000e55973b11c4d4edd940f85c2411abb579d62461ddec5eea26be6c8c697c22808268c865ce85ba037a996c7015f5b8494cc868701e0d8865a11
   languageName: node
   linkType: hard
 
@@ -9917,7 +9917,7 @@ __metadata:
     "@storybook/react": "npm:7.6.20"
     "@storybook/react-webpack5": "npm:7.6.20"
     "@tsconfig/node16-strictest": "npm:1.0.4"
-    "@types/chrome": "npm:0.0.289"
+    "@types/chrome": "npm:0.0.290"
     "@types/jest": "npm:29.5.14"
     "@types/mini-css-extract-plugin": "npm:2.5.1"
     "@types/react": "npm:18.3.18"
