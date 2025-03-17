@@ -26,8 +26,8 @@
     "url": "https://github.com/fujikky/notion-like-button.git"
   },
   "dependencies": {
-    "@linaria/core": "6.2.0",
-    "@linaria/react": "6.2.1",
+    "@linaria/core": "6.3.0",
+    "@linaria/react": "6.3.0",
     "@notionhq/client": "2.2.7",
     "@xobotyi/scrollbar-width": "1.9.5",
     "react": "19.0.0",
