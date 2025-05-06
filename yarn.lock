@@ -3759,13 +3759,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:0.0.319":
-  version: 0.0.319
-  resolution: "@types/chrome@npm:0.0.319"
+"@types/chrome@npm:0.0.320":
+  version: 0.0.320
+  resolution: "@types/chrome@npm:0.0.320"
   dependencies:
     "@types/filesystem": "npm:*"
     "@types/har-format": "npm:*"
-  checksum: 10c0/2d79dc5753b04371eb6290373df1b406613f55d6ee03d97583adf166ea93786322665d031053ed25dfba43cb916a72ad33f1b0a1bc9635ea53a8ae45250a8305
+  checksum: 10c0/0f62648f79910ccd52ccf5e4868f61d7b28e1d6beb3a252c0d16da73b18e1a91ccef4d00e7d08dbe768b09971a5d1cb10b86cece8df8b2c366f281b6caf0cd2a
   languageName: node
   linkType: hard
 
@@ -4105,13 +4105,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.3.20":
-  version: 18.3.20
-  resolution: "@types/react@npm:18.3.20"
+"@types/react@npm:18.3.21":
+  version: 18.3.21
+  resolution: "@types/react@npm:18.3.21"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/65fa867c91357e4c4c646945c8b99044360f8973cb7f928ec4de115fe3207827985d45be236e6fd6c092b09f631c2126ce835c137be30718419e143d73300d8f
+  checksum: 10c0/b33424c62f01ab2404c60abef995e05aa1a696a636bdd77a34ef6c942d171c673b1e451d9dba7f9a169a83c9eef0ddfaf1ba08f6cef542df9404290199a73967
   languageName: node
   linkType: hard
 
@@ -9895,10 +9895,10 @@ __metadata:
     "@storybook/react": "npm:7.6.20"
     "@storybook/react-webpack5": "npm:7.6.20"
     "@tsconfig/node16-strictest": "npm:1.0.4"
-    "@types/chrome": "npm:0.0.319"
+    "@types/chrome": "npm:0.0.320"
     "@types/jest": "npm:29.5.14"
     "@types/mini-css-extract-plugin": "npm:2.5.1"
-    "@types/react": "npm:18.3.20"
+    "@types/react": "npm:18.3.21"
     "@types/react-dom": "npm:18.3.7"
     "@wyw-in-js/webpack-loader": "npm:0.6.0"
     "@xobotyi/scrollbar-width": "npm:1.9.5"
