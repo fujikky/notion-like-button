@@ -4076,13 +4076,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:*":
-  version: 15.7.14
-  resolution: "@types/prop-types@npm:15.7.14"
-  checksum: 10c0/1ec775160bfab90b67a782d735952158c7e702ca4502968aa82565bd8e452c2de8601c8dfe349733073c31179116cf7340710160d3836aa8a1ef76d1532893b1
-  languageName: node
-  linkType: hard
-
 "@types/qs@npm:*, @types/qs@npm:^6.9.5":
   version: 6.9.18
   resolution: "@types/qs@npm:6.9.18"
@@ -4097,22 +4090,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.3.7":
-  version: 18.3.7
-  resolution: "@types/react-dom@npm:18.3.7"
+"@types/react-dom@npm:19.1.5":
+  version: 19.1.5
+  resolution: "@types/react-dom@npm:19.1.5"
   peerDependencies:
-    "@types/react": ^18.0.0
-  checksum: 10c0/8bd309e2c3d1604a28a736a24f96cbadf6c05d5288cfef8883b74f4054c961b6b3a5e997fd5686e492be903c8f3380dba5ec017eff3906b1256529cd2d39603e
+    "@types/react": ^19.0.0
+  checksum: 10c0/2a29e77cf6bb6e9f57bcfa54509c216cad2e16e244f0bd56369966ec88c072b9c91f6011d14f9e18fbfe2b801b18b86f616de75e5c8aef0be73c1f74abb33b49
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.3.21":
-  version: 18.3.21
-  resolution: "@types/react@npm:18.3.21"
+"@types/react@npm:19.1.4":
+  version: 19.1.4
+  resolution: "@types/react@npm:19.1.4"
   dependencies:
-    "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/b33424c62f01ab2404c60abef995e05aa1a696a636bdd77a34ef6c942d171c673b1e451d9dba7f9a169a83c9eef0ddfaf1ba08f6cef542df9404290199a73967
+  checksum: 10c0/501350d4f9cef13c5dd1b1496fa70ebaff52f6fa359b623b51c9d817e5bc4333fa3c8b7a6a4cbc88c643385052d66a243c3ceccfd6926062f917a2dd0535f6b3
   languageName: node
   linkType: hard
 
@@ -9899,8 +9891,8 @@ __metadata:
     "@types/chrome": "npm:0.0.323"
     "@types/jest": "npm:29.5.14"
     "@types/mini-css-extract-plugin": "npm:2.5.1"
-    "@types/react": "npm:18.3.21"
-    "@types/react-dom": "npm:18.3.7"
+    "@types/react": "npm:19.1.4"
+    "@types/react-dom": "npm:19.1.5"
     "@wyw-in-js/webpack-loader": "npm:0.6.0"
     "@xobotyi/scrollbar-width": "npm:1.9.5"
     babel-loader: "npm:10.0.0"
