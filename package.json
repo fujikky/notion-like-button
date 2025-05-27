@@ -49,7 +49,7 @@
     "@types/chrome": "0.0.323",
     "@types/jest": "29.5.14",
     "@types/mini-css-extract-plugin": "2.5.1",
-    "@types/react": "18.3.22",
+    "@types/react": "18.3.23",
     "@types/react-dom": "18.3.7",
     "@wyw-in-js/webpack-loader": "0.6.0",
     "babel-loader": "10.0.0",
