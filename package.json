@@ -30,8 +30,8 @@
     "@linaria/react": "6.3.0",
     "@notionhq/client": "2.2.7",
     "@xobotyi/scrollbar-width": "1.9.5",
-    "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.28.4",
