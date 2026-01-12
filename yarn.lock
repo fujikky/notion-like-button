@@ -5289,9 +5289,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/transform@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@wyw-in-js/transform@npm:1.0.2"
+"@wyw-in-js/transform@npm:1.0.3":
+  version: 1.0.3
+  resolution: "@wyw-in-js/transform@npm:1.0.3"
   dependencies:
     "@babel/core": "npm:^7.23.5"
     "@babel/generator": "npm:^7.23.5"
@@ -5307,19 +5307,19 @@ __metadata:
     source-map: "npm:^0.7.4"
     stylis: "npm:^4.3.0"
     ts-invariant: "npm:^0.10.3"
-  checksum: 10c0/ca6f94fe4bd778207aa0dc9b5baefa8733af3c94b6ffafd95e9aa6982fff9cc2d6f16909e0d025ce76beb054d5485dee82534061251e340b58f78ae8dcc77dbb
+  checksum: 10c0/f7ff44d6d3f5d8bb4336f040f376a5f2bfdd14dc5133d33637d64781da7b124caf093bc4f40ecc50ba55f346338d3d9a37893190d6fb95d3d4b06420ce53dd9c
   languageName: node
   linkType: hard
 
-"@wyw-in-js/webpack-loader@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@wyw-in-js/webpack-loader@npm:1.0.2"
+"@wyw-in-js/webpack-loader@npm:1.0.3":
+  version: 1.0.3
+  resolution: "@wyw-in-js/webpack-loader@npm:1.0.3"
   dependencies:
     "@wyw-in-js/shared": "npm:1.0.2"
-    "@wyw-in-js/transform": "npm:1.0.2"
+    "@wyw-in-js/transform": "npm:1.0.3"
   peerDependencies:
     webpack: ^5.76.0
-  checksum: 10c0/a308450ef20f096aec749727b1524340dc361d07bc268cce9dae13570d92a640ad7be4d291ddb89269d9150815ef86df2061e02224c4f20ea91641ef0d1944dd
+  checksum: 10c0/1c0187a04976af4fd5214eb1dd0528d31914a4aa016f16c894fcfb87abe8522ea5353298bca8e1a4faca8a72ec444045424aaddb8b27dba35ebaec68fd16acd6
   languageName: node
   linkType: hard
 
@@ -10830,7 +10830,7 @@ __metadata:
     "@types/mini-css-extract-plugin": "npm:2.5.1"
     "@types/react": "npm:18.3.27"
     "@types/react-dom": "npm:18.3.7"
-    "@wyw-in-js/webpack-loader": "npm:1.0.2"
+    "@wyw-in-js/webpack-loader": "npm:1.0.3"
     "@xobotyi/scrollbar-width": "npm:1.9.5"
     babel-loader: "npm:10.0.0"
     copy-webpack-plugin: "npm:13.0.1"
