@@ -2889,13 +2889,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@notionhq/client@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@notionhq/client@npm:2.2.7"
+"@notionhq/client@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@notionhq/client@npm:2.3.0"
   dependencies:
     "@types/node-fetch": "npm:^2.5.10"
     node-fetch: "npm:^2.6.1"
-  checksum: 10c0/44ca765e084c5a29b6a45b5b52b6d3dcd1c89faf117c936f07dda1a4b945f4af47ce2b8d512950294ce4bd88083e705bf161244d4b0fa2d005b34e5c7e4d5b2d
+  checksum: 10c0/48af6e0d44c97892374755fbfbca6eb2f27e5ad8baabc511d48ec02cc7d6a1488b1692423ff426cb77c39ac5b4c9bd5498d4b6bc40e295d149ff3d24ce3d8ecc
   languageName: node
   linkType: hard
 
@@ -11057,7 +11057,7 @@ __metadata:
     "@linaria/core": "npm:6.3.0"
     "@linaria/react": "npm:6.3.0"
     "@linaria/shaker": "npm:5.0.3"
-    "@notionhq/client": "npm:2.2.7"
+    "@notionhq/client": "npm:2.3.0"
     "@storybook/addon-actions": "npm:7.6.21"
     "@storybook/addon-essentials": "npm:7.6.21"
     "@storybook/addon-links": "npm:7.6.21"
