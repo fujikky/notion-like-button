@@ -55,7 +55,7 @@
     "babel-loader": "10.0.0",
     "copy-webpack-plugin": "13.0.1",
     "css-loader": "7.1.2",
-    "eslint": "8.57.1",
+    "eslint": "10.0.2",
     "eslint-config-timetree": "1.8.0",
     "mini-css-extract-plugin": "2.10.0",
     "npm-run-all2": "8.0.4",
