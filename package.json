@@ -28,7 +28,7 @@
   "dependencies": {
     "@linaria/core": "6.3.0",
     "@linaria/react": "6.3.0",
-    "@notionhq/client": "2.2.7",
+    "@notionhq/client": "2.3.0",
     "@xobotyi/scrollbar-width": "1.9.5",
     "react": "19.2.4",
     "react-dom": "19.2.4"
