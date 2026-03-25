@@ -53,7 +53,7 @@
     "@types/react-dom": "18.3.7",
     "@wyw-in-js/webpack-loader": "1.0.6",
     "babel-loader": "10.1.1",
-    "copy-webpack-plugin": "13.0.1",
+    "copy-webpack-plugin": "14.0.0",
     "css-loader": "7.1.4",
     "eslint": "8.57.1",
     "eslint-config-timetree": "1.8.0",
