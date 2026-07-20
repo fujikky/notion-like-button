@@ -3210,13 +3210,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@notionhq/client@npm:2.2.7":
-  version: 2.2.7
-  resolution: "@notionhq/client@npm:2.2.7"
-  dependencies:
-    "@types/node-fetch": "npm:^2.5.10"
-    node-fetch: "npm:^2.6.1"
-  checksum: 10c0/44ca765e084c5a29b6a45b5b52b6d3dcd1c89faf117c936f07dda1a4b945f4af47ce2b8d512950294ce4bd88083e705bf161244d4b0fa2d005b34e5c7e4d5b2d
+"@notionhq/client@npm:5.23.2":
+  version: 5.23.2
+  resolution: "@notionhq/client@npm:5.23.2"
+  checksum: 10c0/81bb34f4c0ad4858f8e8d304e02a1eaa382298ba41e5b15bebb7145d32faa80809b4a0ddd610c4659d1f93bda280ebce90e1cdbf44cb914ffdc57e8261640c44
   languageName: node
   linkType: hard
 
@@ -5754,7 +5751,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:^2.5.10, @types/node-fetch@npm:^2.6.4":
+"@types/node-fetch@npm:^2.6.4":
   version: 2.6.12
   resolution: "@types/node-fetch@npm:2.6.12"
   dependencies:
@@ -11785,7 +11782,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.0.0, node-fetch@npm:^2.6.1":
+"node-fetch@npm:^2.0.0":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:
@@ -11882,7 +11879,7 @@ __metadata:
     "@linaria/core": "npm:6.3.0"
     "@linaria/react": "npm:6.3.0"
     "@linaria/shaker": "npm:5.0.3"
-    "@notionhq/client": "npm:2.2.7"
+    "@notionhq/client": "npm:5.23.2"
     "@storybook/addon-actions": "npm:7.6.24"
     "@storybook/addon-essentials": "npm:7.6.24"
     "@storybook/addon-links": "npm:7.6.24"
