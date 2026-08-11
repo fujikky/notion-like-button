@@ -108,7 +108,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^7.22.15, @babel/generator@npm:^7.23.0, @babel/generator@npm:^7.23.5, @babel/generator@npm:^7.27.3":
+"@babel/generator@npm:^7.22.15, @babel/generator@npm:^7.23.0, @babel/generator@npm:^7.27.3":
   version: 7.27.5
   resolution: "@babel/generator@npm:7.27.5"
   dependencies:
@@ -3053,12 +3053,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@linaria/core@npm:6.3.0, @linaria/core@npm:^6.3.0":
-  version: 6.3.0
-  resolution: "@linaria/core@npm:6.3.0"
+"@linaria/core@npm:8.2.0, @linaria/core@npm:^8.2.0":
+  version: 8.2.0
+  resolution: "@linaria/core@npm:8.2.0"
   dependencies:
-    "@wyw-in-js/processor-utils": "npm:^0.6.0"
-  checksum: 10c0/4a3c7a1b3ae486e27540bcafe377498c22770e4e2914084b495a6aae65b77611308505d11108d3d999bfd9e40e443f6deb3120dbabbdaa8fc922de1db320b515
+    "@wyw-in-js/processor-utils": "npm:2.4.0"
+  checksum: 10c0/9c483c8bfedad2acc5ce6bc7a810b6ce89a73a3732dbf7c7a1dcb57b3c1beb306ddf1a304f947e327c30ef0b15098d4f9e2b252920c9926b85f0c897d4e49a08
   languageName: node
   linkType: hard
 
@@ -3083,21 +3083,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@linaria/react@npm:6.3.0":
-  version: 6.3.0
-  resolution: "@linaria/react@npm:6.3.0"
+"@linaria/react@npm:8.2.0":
+  version: 8.2.0
+  resolution: "@linaria/react@npm:8.2.0"
   dependencies:
     "@emotion/is-prop-valid": "npm:^1.2.0"
-    "@linaria/core": "npm:^6.3.0"
-    "@wyw-in-js/processor-utils": "npm:^0.6.0"
-    "@wyw-in-js/shared": "npm:^0.6.0"
+    "@linaria/core": "npm:^8.2.0"
+    "@wyw-in-js/processor-utils": "npm:2.4.0"
+    "@wyw-in-js/shared": "npm:2.4.0"
     minimatch: "npm:^9.0.3"
     react-html-attributes: "npm:^1.4.6"
     resolve: "npm:^1.22.8"
-    ts-invariant: "npm:^0.10.3"
   peerDependencies:
     react: ">=16"
-  checksum: 10c0/e5a0aed9b7a7df78f6a3293a7de92d808eef196fb04c895a66197bb86f4e1b5ed69d94656a8b4cc472449fa92e67554cfb62754119e688f369b270cc58f366a0
+  checksum: 10c0/5f8c626dccb3bb25506fd500b0bd548ea347d74ba138c588ef9ebbac15e902c768fd29427023b327f33b8e63c32e79a6d3b6f86722b75d63c3440cf643177d01
   languageName: node
   linkType: hard
 
@@ -6270,24 +6269,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/processor-utils@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "@wyw-in-js/processor-utils@npm:0.6.0"
+"@wyw-in-js/processor-utils@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@wyw-in-js/processor-utils@npm:2.4.0"
   dependencies:
-    "@babel/generator": "npm:^7.23.5"
-    "@wyw-in-js/shared": "npm:0.6.0"
-  checksum: 10c0/e7338afb71aa1eccf7646447df9d20c2ac895dc1d5a5ad8c26931997fa31595ece5890e8ada39b3c1fda28439c7598de950980dded714dbe003b232f95d22d9e
-  languageName: node
-  linkType: hard
-
-"@wyw-in-js/shared@npm:0.6.0, @wyw-in-js/shared@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "@wyw-in-js/shared@npm:0.6.0"
-  dependencies:
-    debug: "npm:^4.3.4"
-    find-up: "npm:^5.0.0"
-    minimatch: "npm:^9.0.3"
-  checksum: 10c0/a7bab831ebdf9172c8b7a117525550b57c6b338bb6579f186b0f54a3cae5cde75dd245e375b93766fe1f1fc1d42f804353622594115727a2a8c4eb4de84aaaab
+    "@wyw-in-js/shared": "npm:2.4.0"
+  checksum: 10c0/ec9b56636f346e20b84f1de1e15f47e7f4c72c98b495a71d53df56c06789b53939cae8cfa227cdb8a81ad6d8baa0533fcc495e838db659e4ef6f4c0ba6d80bf6
   languageName: node
   linkType: hard
 
@@ -6299,6 +6286,17 @@ __metadata:
     find-up: "npm:^5.0.0"
     minimatch: "npm:^9.0.3"
   checksum: 10c0/f6b2010bd47e36b16588a61d9fd6ab3cf5642f678c8e8978864250d37af21934d41d9107a427ab1f3028445997c890b4ff0de3ec0f7c179ca4f57e688a5eff7f
+  languageName: node
+  linkType: hard
+
+"@wyw-in-js/shared@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@wyw-in-js/shared@npm:2.4.0"
+  dependencies:
+    debug: "npm:^4.3.4"
+    find-up: "npm:^5.0.0"
+    minimatch: "npm:^9.0.3"
+  checksum: 10c0/06d8051c5d6c717f1fdb5059db03bbb8c7ff59849bc2cbe57f0d62c976b570a3ae969911ead7abdbdd5bb04138b7020e1cc5fe4b5c4a16d311f18794854f4568
   languageName: node
   linkType: hard
 
@@ -11879,8 +11877,8 @@ __metadata:
     "@babel/preset-react": "npm:8.0.1"
     "@babel/preset-typescript": "npm:8.0.1"
     "@linaria/babel-preset": "npm:5.0.4"
-    "@linaria/core": "npm:6.3.0"
-    "@linaria/react": "npm:6.3.0"
+    "@linaria/core": "npm:8.2.0"
+    "@linaria/react": "npm:8.2.0"
     "@linaria/shaker": "npm:5.0.3"
     "@notionhq/client": "npm:2.2.7"
     "@storybook/addon-actions": "npm:7.6.24"
