@@ -8,8 +8,12 @@ export default {
   component: FormControl,
   args: {
     fieldName: "Name",
-    children: <Input placeholder="test" />,
   },
+  render: (args) => (
+    <FormControl {...args}>
+      <Input placeholder="test" />
+    </FormControl>
+  ),
 } as Meta<typeof FormControl>;
 
 export const Default: Story = {};
