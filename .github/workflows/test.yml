@@ -10,9 +10,9 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
-      - name: yarn install
+      - name: pnpm install
         run: |
           corepack enable
-          yarn install --immutable
-      - name: Run eslint
-        run: yarn lint
+          pnpm install --frozen-lockfile
+      - name: Run lint
+        run: pnpm lint

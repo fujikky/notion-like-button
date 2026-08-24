@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   manifest: {
     name: "Notion Like Button",
     description: "Embed Like Button into Notion",

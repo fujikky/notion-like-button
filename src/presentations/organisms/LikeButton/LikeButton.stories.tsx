@@ -34,7 +34,6 @@ export const Submitting: Story = {
 
 export const Toggle: Story = {
   render: (args) => {
-    /* eslint-disable react-hooks/rules-of-hooks */
     const [isLiked, setIsLiked] = useState(args.isLiked);
     const [likeCount, setLikeCount] = useState(args.likeCount);
     const [isSubmitting, setIsSubmitting] = useState(args.isSubmitting);
@@ -53,7 +52,6 @@ export const Toggle: Story = {
       setWithAnimation(false);
       setTimeout(() => setIsSubmitting(false), 1000);
     }, []);
-    /* eslint-enable react-hooks/rules-of-hooks */
 
     return (
       <LikeButton
