@@ -1,9 +1,9 @@
 import { styled } from "@linaria/react";
-import type { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Settings } from ".";
 
-type Story = ComponentStoryObj<typeof Settings>;
+type Story = StoryObj<typeof Settings>;
 
 const StyledWrapper = styled.div`
   width: max-content;
@@ -22,7 +22,7 @@ export default {
     errors: {},
   },
   decorators: [(story) => <StyledWrapper>{story()}</StyledWrapper>],
-} as ComponentMeta<typeof Settings>;
+} as Meta<typeof Settings>;
 
 export const Default: Story = {};
 
