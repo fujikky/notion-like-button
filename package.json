@@ -1,6 +1,6 @@
 {
   "name": "notion-like-button",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "chrome-extension-typescript-starter",
   "main": "index.js",
   "type": "module",
