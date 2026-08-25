@@ -1,10 +1,28 @@
 {
-  "extends": "@tsconfig/node16-strictest/tsconfig.json",
   "compilerOptions": {
-    "jsx": "preserve",
+    "lib": ["es2022", "dom"],
+    "target": "es2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "types": ["chrome"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "checkJs": true,
+    "jsx": "react-jsx",
     "noEmit": true,
-    "paths": { "~/*": ["./src/*"] },
-    "baseUrl": "."
+    "paths": { "~/*": ["./src/*"] }
   },
   "include": ["src/**/*", "typings.d.ts"]
 }

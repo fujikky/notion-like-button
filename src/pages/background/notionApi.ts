@@ -4,6 +4,7 @@ import embededSettings from "embeded-settings";
 import type { Layout, SettingsValues } from "~/types";
 
 const DEFAULT_LIKE_PROP = "Like";
+const NOTION_HOSTS = ["www.notion.so", "app.notion.com"];
 
 type NotionPageInfo = {
   readonly pageId: string;
@@ -17,7 +18,7 @@ type NotionPageContext = {
 
 const resolvePageInfo = (url: string): NotionPageInfo | null => {
   const u = new URL(url);
-  if (u.host !== "www.notion.so") return null;
+  if (!NOTION_HOSTS.includes(u.host)) return null;
 
   const queryPageId = u.searchParams.get("p");
   if (queryPageId) {
@@ -39,7 +40,7 @@ const resolvePageInfo = (url: string): NotionPageInfo | null => {
 };
 
 const getNotionContext = async (
-  url: string
+  url: string,
 ): Promise<NotionPageContext | null> => {
   const pageInfo = resolvePageInfo(url);
   if (!pageInfo) return null;
@@ -58,10 +59,8 @@ const getNotionContext = async (
     auth: settings.apiToken,
     fetch: (input, init) => {
       const method = init?.method?.toUpperCase();
-      const newInit: RequestInit = {
-        ...init,
-        ...(method ? { method } : {}),
-      };
+      const newInit = { ...init } as RequestInit;
+      if (method) newInit.method = method;
       return fetch(input, newInit);
     },
   });
@@ -72,21 +71,23 @@ const getNotionContext = async (
 const getLikedPersonIds = async (
   client: Client,
   pageId: string,
-  likeProp: string
+  likeProp: string,
 ) => {
+  // biome-ignore lint/style/useNamingConvention: Notion API requires snake_case field names
   const page = await client.pages.retrieve({ page_id: pageId });
   if (!("properties" in page)) throw new Error("page has not properties");
   const propertyId = page.properties[likeProp]?.id;
   if (!propertyId) throw new Error("page has not like prop");
 
   const property = await client.pages.properties.retrieve({
+    // biome-ignore lint/style/useNamingConvention: Notion API requires snake_case field names
     page_id: page.id,
+    // biome-ignore lint/style/useNamingConvention: Notion API requires snake_case field names
     property_id: propertyId,
   });
   if (property.object !== "list") throw Error("like property is not a list");
 
   const mutableIds = [];
-  // eslint-disable-next-line functional/no-loop-statement
   for (const item of property.results) {
     if (item.type !== "people") continue;
     mutableIds.push(item.people.id);
@@ -96,7 +97,7 @@ const getLikedPersonIds = async (
 
 const createLikeInfo = (
   personIds: readonly string[],
-  currentUserId: string
+  currentUserId: string,
 ) => {
   const isLiked = personIds.some((id) => id === currentUserId);
   const likeCount = personIds.length;
@@ -111,7 +112,7 @@ export const getLikeInfo = async (url: string, userId: string) => {
     const ids = await getLikedPersonIds(
       notion.client,
       notion.pageId,
-      notion.likeProp
+      notion.likeProp,
     );
     return { ...createLikeInfo(ids, userId), layout: notion.layout, url };
   } catch {
@@ -126,17 +127,18 @@ export const createLike = async (url: string, userId: string) => {
   const ids = await getLikedPersonIds(
     notion.client,
     notion.pageId,
-    notion.likeProp
+    notion.likeProp,
   );
   const people = ids.map((id) => ({ id })).concat({ id: userId });
   await notion.client.pages.update({
+    // biome-ignore lint/style/useNamingConvention: Notion API requires snake_case field names
     page_id: notion.pageId,
     properties: { [notion.likeProp]: { type: "people", people } },
   });
   return {
     ...createLikeInfo(
       people.map((p) => p.id),
-      userId
+      userId,
     ),
     layout: notion.layout,
     url,
@@ -150,17 +152,18 @@ export const deleteLike = async (url: string, userId: string) => {
   const ids = await getLikedPersonIds(
     notion.client,
     notion.pageId,
-    notion.likeProp
+    notion.likeProp,
   );
   const people = ids.filter((id) => id !== userId).map((id) => ({ id }));
   await notion.client.pages.update({
+    // biome-ignore lint/style/useNamingConvention: Notion API requires snake_case field names
     page_id: notion.pageId,
     properties: { [notion.likeProp]: { type: "people", people } },
   });
   return {
     ...createLikeInfo(
       people.map((p) => p.id),
-      userId
+      userId,
     ),
     layout: notion.layout,
     url,

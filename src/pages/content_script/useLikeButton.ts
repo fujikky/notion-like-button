@@ -29,7 +29,7 @@ export const useLikeButton = (): HookResult => {
     withAnimation: false,
   });
   const [temporaryLikeInfo, setTemporaryLikeInfo] = useState<LikeInfo | null>(
-    null
+    null,
   );
   const [hasScrollBar] = useState(() => (scrollbarWidth() ?? 0) > 0);
 

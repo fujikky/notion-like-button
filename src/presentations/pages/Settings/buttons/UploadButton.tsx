@@ -35,7 +35,7 @@ export const UploadButton = ({ className, children, onUpload }: Props) => {
       mutableReader.onload = (e) => onUpload(e.target?.result);
       mutableReader.readAsText(file);
     },
-    [onUpload]
+    [onUpload],
   );
 
   return (

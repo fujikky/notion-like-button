@@ -5,7 +5,7 @@
     "packages:linters",
     ":maintainLockFilesWeekly"
   ],
-  "postUpdateOptions": ["yarnDedupeFewer"],
+  "postUpdateOptions": ["pnpmDedupe"],
   "automerge": true,
   "packageRules": [
     {

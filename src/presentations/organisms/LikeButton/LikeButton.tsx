@@ -130,7 +130,7 @@ export const LikeButton = ({
       className={cx(
         isSubmitting && isSubmittingStyle,
         isLiked && isLikedStyle,
-        withAnimation && withAnimationStyle
+        withAnimation && withAnimationStyle,
       )}
       onClick={handleClick}
     >

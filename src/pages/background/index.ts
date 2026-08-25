@@ -2,6 +2,12 @@ import type { RuntimeMessageRequest, TabMessageRequest } from "~/types";
 
 import { createLike, deleteLike, getLikeInfo } from "./notionApi";
 
+// The receiving tab may not have the content script listening yet (e.g. it
+// doesn't match the content script, or hasn't finished loading), in which
+// case chrome.tabs.sendMessage rejects. These notifications are best-effort.
+const sendTabMessage = (tabId: number, message: TabMessageRequest) =>
+  chrome.tabs.sendMessage<TabMessageRequest>(tabId, message).catch(() => {});
+
 chrome.runtime.onMessage.addListener(
   async (request: RuntimeMessageRequest, sender) => {
     const tabId = sender.tab?.id;
@@ -14,56 +20,39 @@ chrome.runtime.onMessage.addListener(
 
           const result = await getLikeInfo(request.url, request.userId);
           if (result) {
-            chrome.tabs.sendMessage<TabMessageRequest>(tabId, {
-              message: "showLikeButton",
-              ...result,
-            });
+            sendTabMessage(tabId, { message: "showLikeButton", ...result });
           } else {
-            chrome.tabs.sendMessage<TabMessageRequest>(tabId, {
-              message: "hideLikeButton",
-            });
+            sendTabMessage(tabId, { message: "hideLikeButton" });
           }
         }
         break;
       case "createLike":
         try {
           const result = await createLike(request.url, request.userId);
-          chrome.tabs.sendMessage<TabMessageRequest>(tabId, {
-            message: "updateLikeButton",
-            ...result,
-          });
-        } catch (e) {
-          chrome.tabs.sendMessage<TabMessageRequest>(tabId, {
-            message: "revertLikeButton",
-          });
+          sendTabMessage(tabId, { message: "updateLikeButton", ...result });
+        } catch {
+          sendTabMessage(tabId, { message: "revertLikeButton" });
         }
         break;
       case "deleteLike":
         try {
           const result = await deleteLike(request.url, request.userId);
-          chrome.tabs.sendMessage<TabMessageRequest>(tabId, {
-            message: "updateLikeButton",
-            ...result,
-          });
-        } catch (e) {
-          chrome.tabs.sendMessage<TabMessageRequest>(tabId, {
-            message: "revertLikeButton",
-          });
+          sendTabMessage(tabId, { message: "updateLikeButton", ...result });
+        } catch {
+          sendTabMessage(tabId, { message: "revertLikeButton" });
         }
         break;
       default:
         break;
     }
-  }
+  },
 );
 
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
   const url = changeInfo.url;
   if (!url) return;
 
-  chrome.tabs.sendMessage<TabMessageRequest>(tabId, {
-    message: "hideLikeButton",
-  });
+  sendTabMessage(tabId, { message: "hideLikeButton" });
 
   const { userId } = await chrome.storage.local.get(["userId"]);
   if (typeof userId !== "string") return;
@@ -71,8 +60,5 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
   const result = await getLikeInfo(url, userId);
   if (!result) return;
 
-  chrome.tabs.sendMessage<TabMessageRequest>(tabId, {
-    message: "showLikeButton",
-    ...result,
-  });
+  sendTabMessage(tabId, { message: "showLikeButton", ...result });
 });

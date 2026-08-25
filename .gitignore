@@ -96,6 +96,9 @@ out
 .nuxt
 dist
 
+# Storybook build output
+storybook-static
+
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
@@ -126,12 +129,8 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-# yarn v2
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
+# pnpm
+.pnpm-store
 
 ### Node Patch ###
 # Serverless Webpack directories

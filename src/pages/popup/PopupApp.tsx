@@ -49,7 +49,7 @@ export const PopupApp = () => {
 
   const hasErrors = useMemo(
     () => Object.values(errors).filter((e) => !!e).length > 0,
-    [errors]
+    [errors],
   );
 
   const handleApiTokenChange = useCallback<
@@ -103,7 +103,7 @@ export const PopupApp = () => {
         await chrome.storage.local.set(result.settings);
       }
     },
-    [apply]
+    [apply],
   );
 
   const handleDownload = useCallback<

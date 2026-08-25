@@ -2,7 +2,7 @@ const getUserId = () => {
   try {
     return JSON.parse(localStorage["LRU:KeyValueStore2:current-user-id"])
       .value as string;
-  } catch (e) {
+  } catch {
     return null;
   }
 };

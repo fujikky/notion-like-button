@@ -11,10 +11,10 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
-      - name: yarn install
+      - name: pnpm install
         run: |
           corepack enable
-          yarn install --immutable
+          pnpm install --frozen-lockfile
       - uses: release-drafter/release-drafter@v6
         id: release_drafter
         env:
@@ -27,7 +27,7 @@ jobs:
           git add .
           git commit -m ":bookmark: version bump"
           git push
-          yarn build
+          pnpm build
       - uses: release-drafter/release-drafter@v6
         id: release_drafter_publish
         with:

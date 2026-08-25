@@ -12,20 +12,22 @@
 ### Setup
 
 ```shell
-$ yarn
+$ pnpm install
 ```
 
 ### Build
 
 ```shell
-$ yarn build
+$ pnpm build
 ```
 
-### Build in watch mode
+### Development server (HMR)
 
 ```
-$ yarn dev
+$ pnpm dev
 ```
+
+Load the `dist` directory once (see below); further changes are reflected via Vite HMR without reloading the extension manually (background script changes trigger a full extension reload).
 
 ### Load extension to chrome
 

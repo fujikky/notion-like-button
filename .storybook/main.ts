@@ -1,27 +1,19 @@
-import { StorybookConfig } from "@storybook/react-webpack5";
-import { TsconfigPathsPlugin } from "tsconfig-paths-webpack-plugin";
+import type { StorybookConfig } from "@storybook/react-vite";
+import wyw from "@wyw-in-js/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
-module.exports = {
+export default {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
-  framework: "@storybook/react-webpack5",
+  addons: ["@storybook/addon-links", "@storybook/addon-docs"],
+  framework: "@storybook/react-vite",
   staticDirs: ["../public"],
-  webpackFinal: (config) => ({
+  typescript: {
+    // react-docgen-typescript is incompatible with TypeScript 7; prop tables
+    // aren't needed for this project.
+    reactDocgen: false,
+  },
+  viteFinal: (config) => ({
     ...config,
-    module: {
-      ...config.module,
-      rules: [
-        ...(config.module?.rules ?? []),
-        {
-          test: /\.tsx?$/,
-          exclude: /node_modules/,
-          use: [{ loader: "@wyw-in-js/webpack-loader" }],
-        },
-      ],
-    },
-    resolve: {
-      ...config.resolve,
-      plugins: [...(config.resolve?.plugins ?? []), new TsconfigPathsPlugin()],
-    },
+    plugins: [...(config.plugins ?? []), tsconfigPaths(), wyw()],
   }),
-} as StorybookConfig;
+} satisfies StorybookConfig;
