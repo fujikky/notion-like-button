@@ -1,12 +1,12 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     "group:definitelyTyped",
     "packages:linters",
-    ":maintainLockFilesWeekly"
+    ":maintainLockFilesWeekly",
+    "helpers:pinGitHubActionDigests"
   ],
   "postUpdateOptions": ["pnpmDedupe"],
-  "automerge": true,
   "packageRules": [
     {
       "groupName": "linaria",
