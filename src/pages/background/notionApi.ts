@@ -55,15 +55,9 @@ const getNotionContext = async (
 
   const likeProp = settings.likeProp || DEFAULT_LIKE_PROP;
 
-  const client = new Client({
-    auth: settings.apiToken,
-    fetch: (input, init) => {
-      const method = init?.method?.toUpperCase();
-      const newInit = { ...init } as RequestInit;
-      if (method) newInit.method = method;
-      return fetch(input, newInit);
-    },
-  });
+  // v5 はクライアント内部で method を大文字化して fetch するため
+  // （旧 v2 で必要だった lowercase "patch" の CORS 対策ラッパーは不要）
+  const client = new Client({ auth: settings.apiToken });
 
   return { ...pageInfo, likeProp, client };
 };
