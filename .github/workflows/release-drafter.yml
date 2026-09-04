@@ -8,10 +8,23 @@ on:
     types: [opened, reopened, synchronize]
 
 jobs:
+  # main への push でドラフトリリースを更新する
   update_release_draft:
-    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    if: github.event_name == 'push'
+    permissions:
+      contents: write
+      pull-requests: read
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@34d80673e067bdc0c24568d3af899c216adcfaa9 # v7
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # release-drafter v7 で Autolabeler は別アクションに分離されたため、
+  # PR へのラベル付け（.github/release-drafter.yml の autolabeler 設定）はこちらで行う
+  autolabel:
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter/autolabeler@34d80673e067bdc0c24568d3af899c216adcfaa9 # v7
