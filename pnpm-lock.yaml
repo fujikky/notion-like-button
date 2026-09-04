@@ -15,8 +15,8 @@ importers:
         specifier: 8.2.0
         version: 8.2.0(react@19.2.7)(supports-color@7.2.0)
       '@notionhq/client':
-        specifier: 2.2.7
-        version: 2.2.7
+        specifier: 2.3.0
+        version: 2.3.0
       '@xobotyi/scrollbar-width':
         specifier: 1.9.5
         version: 1.9.5
@@ -648,8 +648,8 @@ packages:
       '@emnapi/core': ^1.7.1 || ^2.0.0-alpha.4
       '@emnapi/runtime': ^1.7.1 || ^2.0.0-alpha.4
 
-  '@notionhq/client@2.2.7':
-    resolution: {integrity: sha512-ackhUZiCTxsDacHPfnuwfJmo7fmi6Il6BK+YByCZM5NEXVIohyEBWm/r18OQkuJzJjeC6Q+Jhh+0yhxjvWq/cA==}
+  '@notionhq/client@2.3.0':
+    resolution: {integrity: sha512-l7WqTCpQqC+HibkB9chghONQTYcxNQT0/rOJemBfmuKQRTu2vuV8B3yA395iKaUdDo7HI+0KvQaz9687Xskzkw==}
     engines: {node: '>=12'}
 
   '@oxc-parser/binding-android-arm-eabi@0.127.0':
@@ -3115,7 +3115,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.3
     optional: true
 
-  '@notionhq/client@2.2.7':
+  '@notionhq/client@2.3.0':
     dependencies:
       '@types/node-fetch': 2.6.13
       node-fetch: 2.7.0
