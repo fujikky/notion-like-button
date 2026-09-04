@@ -1,2 +1,4 @@
-allowBuilds:
-  esbuild: true
+# 公開から 7 日未満のパッケージを解決しない（サプライチェーン対策。renovate 側の minimumReleaseAge と対）
+minimumReleaseAge: 10080
+# 依存パッケージの lifecycle scripts (postinstall 等) を実行しない
+ignoreScripts: true
