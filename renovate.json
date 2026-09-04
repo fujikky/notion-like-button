@@ -6,6 +6,7 @@
     ":maintainLockFilesWeekly",
     "helpers:pinGitHubActionDigests"
   ],
+  "minimumReleaseAge": "7 days",
   "postUpdateOptions": ["pnpmDedupe"],
   "reviewers": ["fujikky"],
   "packageRules": [
