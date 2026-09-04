@@ -12,9 +12,7 @@
   "packageRules": [
     {
       "groupName": "linaria",
-      "matchPackageNames": [
-        "/@linaria//"
-      ]
+      "matchPackageNames": ["/@linaria//"]
     }
   ]
 }
