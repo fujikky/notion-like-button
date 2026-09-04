@@ -6,34 +6,36 @@ template: |
 
   $CHANGES
 
+# release-drafter v7: カテゴリの `label` は `when.label` に、
+# 旧 `version-resolver` は各カテゴリの `semver-increment` に統合された
 categories:
   - title: "💥 Breaking changes"
-    label: "breaking change"
+    semver-increment: major
+    when:
+      label: "breaking change"
   - title: "🚀 Features"
-    label: feature
+    semver-increment: minor
+    when:
+      label: feature
   - title: "☘️ Change specs"
-    label: change
+    semver-increment: minor
+    when:
+      label: change
   - title: "🐛 Bug Fixes"
-    label: bug
+    semver-increment: patch
+    when:
+      label: bug
   - title: "📝 Chore"
-    label: chore
+    semver-increment: patch
+    when:
+      label: chore
   - title: "🎨 Renovate"
-    label: renovate
-
-version-resolver:
-  major:
-    labels:
-      - "breaking change"
-  minor:
-    labels:
-      - feature
-      - change
-  patch:
-    labels:
-      - bug
-      - chore
-      - renovate
-  default: patch
+    semver-increment: patch
+    when:
+      label: renovate
+  # どのカテゴリにも一致しない場合の既定（旧 version-resolver.default: patch）
+  - type: version-resolver
+    semver-increment: patch
 
 autolabeler:
   - label: "breaking change"
