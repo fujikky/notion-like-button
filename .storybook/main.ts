@@ -14,6 +14,22 @@ export default {
   },
   viteFinal: (config) => ({
     ...config,
-    plugins: [...(config.plugins ?? []), tsconfigPaths(), wyw()],
+    plugins: [
+      // The CRXJS manifest plugins are for the extension build only and break
+      // the Storybook preview build under Vite 8 (rolldown).
+      ...(config.plugins ?? [])
+        .flat()
+        .filter(
+          (plugin) =>
+            !(
+              plugin &&
+              typeof plugin === "object" &&
+              "name" in plugin &&
+              String(plugin.name).startsWith("crx:")
+            ),
+        ),
+      tsconfigPaths(),
+      wyw(),
+    ],
   }),
 } satisfies StorybookConfig;
