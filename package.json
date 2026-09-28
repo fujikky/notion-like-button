@@ -39,7 +39,7 @@
     "@storybook/addon-links": "10.6.0",
     "@storybook/react-vite": "10.6.0",
     "@timetree/biome-config": "jsr:^1.0.3",
-    "@types/chrome": "0.2.9",
+    "@types/chrome": "0.3.0",
     "@types/jest": "30.0.0",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
