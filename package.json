@@ -33,7 +33,7 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.13",
+    "@biomejs/biome": "2.5.14",
     "@crxjs/vite-plugin": "2.7.1",
     "@storybook/addon-docs": "10.6.0",
     "@storybook/addon-links": "10.6.0",
