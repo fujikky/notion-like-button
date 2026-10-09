@@ -57,7 +57,10 @@ const getNotionContext = async (
 
   // v5 はクライアント内部で method を大文字化して fetch するため
   // （旧 v2 で必要だった lowercase "patch" の CORS 対策ラッパーは不要）
-  const client = new Client({ auth: settings.apiToken });
+  const client = new Client({
+    auth: settings.apiToken,
+    dangerouslyAllowBrowser: true,
+  });
 
   return { ...pageInfo, likeProp, client };
 };
