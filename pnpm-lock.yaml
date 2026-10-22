@@ -219,8 +219,8 @@ importers:
         specifier: 6.1.2
         version: 6.1.2(vite@8.3.4(@types/node@26.6.3)(esbuild@0.28.2))
       '@wyw-in-js/vite':
-        specifier: 2.5.0
-        version: 2.5.0(supports-color@7.2.0)(typescript@7.0.2)(vite@8.3.4(@types/node@26.6.3)(esbuild@0.28.2))
+        specifier: 2.6.0
+        version: 2.6.0(supports-color@7.2.0)(typescript@7.0.2)(vite@8.3.4(@types/node@26.6.3)(esbuild@0.28.2))
       npm-run-all2:
         specifier: 9.0.3
         version: 9.0.3
@@ -1692,24 +1692,24 @@ packages:
     resolution: {integrity: sha512-Zc7XCCPE+g+Qo0HfQt7pYuyTGTk2PaZwpemzPmCxvRTWXOkLKoEp3lom0qrg89M+9MGRYQFalOgU/2H+wEipIw==}
     engines: {node: '>=22.0.0'}
 
-  '@wyw-in-js/processor-utils@2.5.0':
-    resolution: {integrity: sha512-2R7qFO4lPfe4QnrHQtg+VVD5teM2X8rLOxPhNuUThYMy02jMETEhl0uBUGxvwQmOiCMa0NkQro6PTMkVbcbo7w==}
+  '@wyw-in-js/processor-utils@2.6.0':
+    resolution: {integrity: sha512-+lTv4G7y7+Xl86CQZ/j7jNVvc5LdZJiaMQniUpXLw5DZLxeIJWahvwSO3wxDhSPXqNLAsD/WagDoAqwnYTnIWg==}
     engines: {node: '>=22.0.0'}
 
   '@wyw-in-js/shared@2.4.0':
     resolution: {integrity: sha512-yWYAg2LkuCRxp3wSpubFnPMiLEt0HUNq0Sdt5LKUKs0vdegCAK6dmAkBCh3A//8PP75N6XZ7eJ5FXxKae/bByw==}
     engines: {node: '>=22.0.0'}
 
-  '@wyw-in-js/shared@2.5.0':
-    resolution: {integrity: sha512-0r+cSP6sHuB6sl0N9gkjhSJ/BI0g9tiwsRV0F+TJivJVKw8kn9Mdilkez0gzlL7L8yGoy7hKsHGCsSddM1ctcw==}
+  '@wyw-in-js/shared@2.6.0':
+    resolution: {integrity: sha512-0u/F3mp3/NxB/EleCho6qyHo+0PdLyLKrtX2q6EfFerp8XCiFdqIlv1V6+5S9Yupq2dgSXIGaQPWvzdRVSN7qA==}
     engines: {node: '>=22.0.0'}
 
-  '@wyw-in-js/transform@2.5.0':
-    resolution: {integrity: sha512-xbhhVJcIQhiGXcWMGPE0xyUK0nRpzY4F/sACrx4PRVB2UgUNMXe2gvfNVVmGyuA8ZO1xeIuRu139pafSV8zcfw==}
+  '@wyw-in-js/transform@2.6.0':
+    resolution: {integrity: sha512-pSV38tfSnsNhmZMTXxmcDq772vygmn/1X1red3TPRehBcFRyupZAXHQuLhAXQqBwjE+qZT5J36/JBiqq6mpL5A==}
     engines: {node: '>=22.0.0'}
 
-  '@wyw-in-js/vite@2.5.0':
-    resolution: {integrity: sha512-Xcjd923ref0FE8KfZCfRhJuFkZcH2s+w09FrGpU3AIlHaNd4ehoWf183YEHW4M+rbUP4VshZG9IHd90yxcntfQ==}
+  '@wyw-in-js/vite@2.6.0':
+    resolution: {integrity: sha512-15wopvgjCM+bdrr8c5uvXTgU9YbrpRovHnURPYPN+qmU0z34jjaOlc39FFjEmxBpPgzrIkYcIoTU6FgrFfl93w==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       vite: '>=3.2.7'
@@ -3753,9 +3753,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@wyw-in-js/processor-utils@2.5.0(supports-color@7.2.0)':
+  '@wyw-in-js/processor-utils@2.6.0(supports-color@7.2.0)':
     dependencies:
-      '@wyw-in-js/shared': 2.5.0(supports-color@7.2.0)
+      '@wyw-in-js/shared': 2.6.0(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3767,7 +3767,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@wyw-in-js/shared@2.5.0(supports-color@7.2.0)':
+  '@wyw-in-js/shared@2.6.0(supports-color@7.2.0)':
     dependencies:
       debug: 4.4.3(supports-color@7.2.0)
       find-up: 5.0.0
@@ -3775,12 +3775,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@wyw-in-js/transform@2.5.0(supports-color@7.2.0)(typescript@7.0.2)':
+  '@wyw-in-js/transform@2.6.0(supports-color@7.2.0)(typescript@7.0.2)':
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/trace-mapping': 0.3.31
-      '@wyw-in-js/processor-utils': 2.5.0(supports-color@7.2.0)
-      '@wyw-in-js/shared': 2.5.0(supports-color@7.2.0)
+      '@wyw-in-js/processor-utils': 2.6.0(supports-color@7.2.0)
+      '@wyw-in-js/shared': 2.6.0(supports-color@7.2.0)
       cosmiconfig: 8.3.6(typescript@7.0.2)
       happy-dom: 20.14.5
       minimatch: 9.0.9
@@ -3796,10 +3796,10 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@wyw-in-js/vite@2.5.0(supports-color@7.2.0)(typescript@7.0.2)(vite@8.3.4(@types/node@26.6.3)(esbuild@0.28.2))':
+  '@wyw-in-js/vite@2.6.0(supports-color@7.2.0)(typescript@7.0.2)(vite@8.3.4(@types/node@26.6.3)(esbuild@0.28.2))':
     dependencies:
-      '@wyw-in-js/shared': 2.5.0(supports-color@7.2.0)
-      '@wyw-in-js/transform': 2.5.0(supports-color@7.2.0)(typescript@7.0.2)
+      '@wyw-in-js/shared': 2.6.0(supports-color@7.2.0)
+      '@wyw-in-js/transform': 2.6.0(supports-color@7.2.0)(typescript@7.0.2)
       vite: 8.3.4(@types/node@26.6.3)(esbuild@0.28.2)
     transitivePeerDependencies:
       - bufferutil
