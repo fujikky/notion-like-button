@@ -201,8 +201,8 @@ importers:
         specifier: 10.6.5
         version: 10.6.5(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(rollup@2.80.0)(storybook@10.6.5(@types/react@19.3.0)(react@19.3.1))(supports-color@7.2.0)(typescript@7.0.2)(vite@8.3.5(@types/node@26.6.5)(esbuild@0.28.2))
       '@timetree/biome-config':
-        specifier: jsr:^1.0.3
-        version: '@jsr/timetree__biome-config@1.0.4'
+        specifier: jsr:^1.0.6
+        version: '@jsr/timetree__biome-config@1.0.6'
       '@types/chrome':
         specifier: 0.3.7
         version: 0.3.7
@@ -631,8 +631,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@jsr/timetree__biome-config@1.0.4':
-    resolution: {integrity: sha512-Vz4C0RuRoQpsQ9He8g+n3ihRT8QkkpBPfMXfw/dne/IBij7acCIeSUBoWW8+QBzCIyIWM+8Tfi+a7YNKeM0x5Q==, tarball: https://npm.jsr.io/~/11/@jsr/timetree__biome-config/1.0.4.tgz}
+  '@jsr/timetree__biome-config@1.0.6':
+    resolution: {integrity: sha512-WXzXJs/Wq52pCLxURZYSjAPtN6fE3ZVzIrGs9RTTDGxK/xSJctlZYOh16WP9DtxLJzy3630Z04JcDVGH/yuQxQ==, tarball: https://npm.jsr.io/~/11/@jsr/timetree__biome-config/1.0.6.tgz}
 
   '@linaria/core@8.2.0':
     resolution: {integrity: sha512-WRY22fd56RjPp5qjV/umgTdu6k2+8PtKuLV9Z311NWZRnQ4lxi0ywKmY9X2ujKtUXk4i/H4Va0wuLhGBgyyxZw==}
@@ -3032,7 +3032,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@jsr/timetree__biome-config@1.0.4': {}
+  '@jsr/timetree__biome-config@1.0.6': {}
 
   '@linaria/core@8.2.0(supports-color@7.2.0)':
     dependencies:

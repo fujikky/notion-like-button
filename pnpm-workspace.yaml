@@ -2,3 +2,5 @@
 minimumReleaseAge: 10080
 # 依存パッケージの lifecycle scripts (postinstall 等) を実行しない
 ignoreScripts: true
+minimumReleaseAgeExclude:
+  - "@jsr/timetree__biome-config@1.0.6"
