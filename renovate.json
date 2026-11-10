@@ -13,6 +13,10 @@
     {
       "groupName": "linaria",
       "matchPackageNames": ["/@linaria//"]
+    },
+    {
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "minimumReleaseAge": null
     }
   ]
 }
