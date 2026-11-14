@@ -173,8 +173,8 @@ importers:
         specifier: 8.2.0
         version: 8.2.0(react@19.3.1)(supports-color@7.2.0)
       '@notionhq/client':
-        specifier: 5.30.0
-        version: 5.30.0
+        specifier: 5.31.1
+        version: 5.31.1
       '@xobotyi/scrollbar-width':
         specifier: 1.9.5
         version: 1.9.5
@@ -660,8 +660,8 @@ packages:
       '@emnapi/core': ^1.7.1 || 2.0.0-beta.2
       '@emnapi/runtime': ^1.7.1 || 2.0.0-beta.2
 
-  '@notionhq/client@5.30.0':
-    resolution: {integrity: sha512-SZpwkns/zScc7P7MA1LC144VT6AlKhy3NRAHa1rSxr/FVBGnmgMI2n81Y89X0UPgnKNSLyoEbzsod8KZsSGLSg==}
+  '@notionhq/client@5.31.1':
+    resolution: {integrity: sha512-LuVlgHTkHPZf0LOILKVaDboYOyIXNHP9x2DSMhrJzUJjB7GzWjves1OA+8iqJxn1QPW6OqXdp0sS/z0Vh+JACA==}
     engines: {node: '>=22'}
 
   '@oxc-parser/binding-android-arm-eabi@0.127.0':
@@ -3104,7 +3104,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.4
     optional: true
 
-  '@notionhq/client@5.30.0': {}
+  '@notionhq/client@5.31.1': {}
 
   '@oxc-parser/binding-android-arm-eabi@0.127.0':
     optional: true
