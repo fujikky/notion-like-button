@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: jdx/mise-action@f5be966e4a917d54244728e6a5fdcd1d93a35e6c # v5.2.6
         with:
-          version: "v2026.11.1"
-          sha256: 7129dbab31d698f9028db9374f7ba7987232b0426f837dcbce437130a61415f9
+          version: "v2026.11.4"
+          sha256: 0296d9cba9324106d4e0962bb94a2072902f3658813aeb3b09504947bb8ddc2b
       - name: pnpm install
         run: pnpm install --frozen-lockfile
       - uses: release-drafter/release-drafter@978bb0b30c5ee8cdd332ced253758157150d43f0 # v7
