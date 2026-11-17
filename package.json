@@ -35,9 +35,9 @@
   "devDependencies": {
     "@biomejs/biome": "2.6.4",
     "@crxjs/vite-plugin": "3.0.0",
-    "@storybook/addon-docs": "10.6.5",
-    "@storybook/addon-links": "10.6.5",
-    "@storybook/react-vite": "10.6.5",
+    "@storybook/addon-docs": "10.6.6",
+    "@storybook/addon-links": "10.6.6",
+    "@storybook/react-vite": "10.6.6",
     "@timetree/biome-config": "jsr:^1.0.6",
     "@types/chrome": "0.3.7",
     "@types/jest": "30.0.0",
@@ -47,7 +47,7 @@
     "@wyw-in-js/vite": "2.7.0",
     "npm-run-all2": "9.0.4",
     "rimraf": "6.1.4",
-    "storybook": "10.6.5",
+    "storybook": "10.6.6",
     "typescript": "7.0.2",
     "vite": "8.3.5",
     "vite-tsconfig-paths": "6.1.1"
