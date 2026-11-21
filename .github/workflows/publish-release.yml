@@ -14,7 +14,7 @@ jobs:
           sha256: 5fb74f80aab81e0a5ca20eb6414cc69b78ae0cab1deaeb521572ed26d8d4a6e3
       - name: pnpm install
         run: pnpm install --frozen-lockfile
-      - uses: release-drafter/release-drafter@978bb0b30c5ee8cdd332ced253758157150d43f0 # v7
+      - uses: release-drafter/release-drafter@d1a19e60e81a7e650d00a7de9277f87e439117ea # v7
         id: release_drafter
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -27,7 +27,7 @@ jobs:
           git commit -m ":bookmark: version bump"
           git push
           pnpm build
-      - uses: release-drafter/release-drafter@978bb0b30c5ee8cdd332ced253758157150d43f0 # v7
+      - uses: release-drafter/release-drafter@d1a19e60e81a7e650d00a7de9277f87e439117ea # v7
         id: release_drafter_publish
         with:
           publish: true
