@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b # v5.2.7
         with:
-          version: "v2026.11.6"
-          sha256: 5fb74f80aab81e0a5ca20eb6414cc69b78ae0cab1deaeb521572ed26d8d4a6e3
+          version: "v2026.11.12"
+          sha256: 9c12c24f5eac6b6357e5265e2629166cc3005459037f5d747680a99e375ff2ab
       - name: pnpm install
         run: pnpm install --frozen-lockfile
       - name: Run lint
